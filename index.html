@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>全屏滚动</title>
+    <title>胡冉的简历</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.9.1-min.js"></script>
@@ -11,10 +11,10 @@
 <body>
     <header>
         <ul id="menu">
-            <li data-menuanchor="page1" class="active"><a href="#page1">个人信息</a></li>
+            <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
             <li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
             <li data-menuanchor="page3"><a href="#page3">项目经验</a></li>
-            <li data-menuanchor="page4"><a href="#page4">在校经历</a></li>
+            <li data-menuanchor="page4"><a href="#page4">个人信息</a></li>
             <li data-menuanchor="page5"><a href="#page5">联系方式</a></li>
         </ul>
     </header>
@@ -22,23 +22,22 @@
 
     <div id="main">
         <section class="section s1 active">
-            <div class="basic-info-box">
-                <div class="basic-info">
+            <div class="box">
+                <div class="home tb-cell">
                     <div class="my-photo"><img src="img/my-photo.jpg"></div>
-                    <div class="basic-info-text">
+                    <div class="home-info">
                         <h1>胡冉</h1>
                         <h2>web前端工程师</h2>
-                        <ul class="detail-info">
-                            <li><i class="info-style phone">  </i><span>13212786159</span></li>
-                            <li><i class="info-style email">  </i><span>rita-hu@foxmail.com</span></li>
-                            <li><i class="info-style weixin">  </i><span>HR353280368</span></li>
-                            <li><i class="info-style github">  </i><a href="https://github.com/RaniHu"><span>https://github.com/RaniHu</span></a></li>
-                            <li><i class="info-style position">  </i><span>Shanghai</span></li>
+                        <ul class="contact">
+                            <li><i class="bg-icon phone">  </i><span>13212786159</span></li>
+                            <li><i class="bg-icon email">  </i><span>rita-hu@foxmail.com</span></li>
+                            <li><i class="bg-icon weixin">  </i><span>HR353280368</span></li>
+                            <li><i class="bg-icon github">  </i><a href="https://github.com/RaniHu"><span>https://github.com/RaniHu</span></a></li>
+                            <li><i class="bg-icon position">  </i><span>Shanghai</span></li>
                         </ul>
 
                     </div>
                 </div>
-
             </div>
         </section>
         <section class="section s2">
@@ -62,12 +61,28 @@
             </div>
         </section>
         <section class="section s3">
-            <h1>这是第三页</h1>
-            <h2>hello</h2>
+
         </section>
         <section class="section s4">
-            <h1>这是第四页</h1>
-            <h2>hello</h2>
+            <div class="box">
+                <div class="education tb-cell">
+                    <h1>教育背景</h1>
+                    <ul class="education-info">
+                        <li><i class="bg-icon degree">  </i><span> 本科</span></li>
+                        <li><i class="bg-icon email">  </i><span> 武汉纺织大学</span></li>
+                        <li><i class="bg-icon weixin">  </i><span>电子商务</span></li>
+                    </ul>
+                </div>
+                <div class="award tb-cell">
+                    <h1>获奖经历</h1>
+                    <ul class="award-info">
+                    <li><i class="bg-icon phone">  </i><span> 本科</span></li>
+                    <li><i class="bg-icon email">  </i><span> 武汉纺织大学</span></li>
+                    <li><i class="bg-icon weixin">  </i><span>电子商务</span></li>
+                </ul>
+
+                </div>
+            </div>
         </section>
         <section class="section s5">
             <h1>这是第五页</h1>
@@ -82,13 +97,13 @@
         $("#main").fullpage({
             verticalCentered: true,                                       //内容垂直居中
             css3: true,
-            sectionsColor: ['#336699', '#666699', '#2982ff', '#009966','#336699'],   //设置每一页背景颜色
+            sectionsColor: ['#23BBB1', '#666699', '#2982ff', '#009966','#336699'],   //设置每一页背景颜色
             anchors: ['page1', 'page2', 'page3', 'page4','page5'],                   //定义锚链接
             scrollingSpeed:500,                                              //滚动速度
             menu:"#menu",
             navigation: true,                                              //显示项目导航
             navigationPosition: 'right',                                   //导航位置
-            navigationTooltips: ['个人信息', '专业技能', '项目经验', '在校经历','联系方式'],     //导航圈的文字
+            navigationTooltips: ['首页', '专业技能', '项目经验', '个人信息','联系方式'],     //导航圈的文字
             navigationColor: '',                                      //导航颜色
             slidesNavigation:    ''  ,                               //显示左右滑块的项目导航
             slidesNavPosition:'bottom',                              //设置左右滑块的导航位置

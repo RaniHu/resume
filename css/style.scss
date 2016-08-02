@@ -57,6 +57,7 @@ $basic-info-height: 480px;
 /*中间主要内容*/
 #main {
 
+  /*每一页*/
   .section {
     text-align: center;
 
@@ -68,12 +69,11 @@ $basic-info-height: 480px;
 
     h2 {
       font-size: 20px;
-      color: #152b40;
+      color: #105752;
     }
 
     /*个人头像*/
     .my-photo {
-      //width: 100%;
       text-align: center;
       opacity: 0;
       transform: scale(0.01);
@@ -85,82 +85,90 @@ $basic-info-height: 480px;
         border-radius: 50%;
       }
     }
-
-
-
   }
 
+  /*当前页*/
   .active {
-
-    .my-photo{
+    .my-photo {
       opacity: 1;
       transform: scale(1);
     }
   }
 
-  .s1 {
-
-    /*个人信息*/
-    .basic-info-box{
-      width: 800px;
-      height: $basic-info-height;
-      margin: 0 auto;
-      display: table;
-      padding-top: 25px;
-
-      .basic-info {
-        display: table-cell;        /*span内部的内容就相当于表格*/
-        vertical-align: middle;     /*vertical-align属性来对齐其中的内容*/
-        text-align: center;
-
-
-        .basic-info-text {
-          //width: 100%;
-
-          /*具体个人信息*/
-          .detail-info{
-            width: 300px;
-            margin: 15px auto;
-            text-align: left;
-            font-size: 15px;
-            padding-left: 50px;
-
-            li{
-              display: block;
-              width: 100%;
-              height: 25px;
-              line-height: 25px;
-              margin: 10px auto;
-              color: #f7f7f7;
-              a{
-                color:#f7f7f7 ;
-              }
-              .info-style{
-                float: left;
-                display: inline-block;
-                width: 80px;
-                height: 25px;
-
-
-              }
-
-              /*循环遍历每个背景图标*/
-              $contact:phone,email,weixin,github,position;
-              @each $contact-style in $contact {
-                .#{$contact-style} {
-                  background: url("../img/#{$contact-style}.png") no-repeat center bottom;
-                }
-              }
-
-              span{
-                float: left;
-              }
-            }
-          }
-        }
+  /*每一页下的ul样式*/
+  @mixin ul-list-style($ul-width , $li-height, $bg-icon-height,$font-size) {
+    ul {
+      width: $ul-width;
+      font-size: $font-size;
+      li {
+        height: $li-height;
+        line-height: $li-height;
       }
     }
+    .bg-icon{
+        height: $bg-icon-height;
+    }
+  }
+  .home {
+    @include ul-list-style(300px,25px,25px,15px);
+    ul{
+      padding-left: 50px;
+    }
+  }
+  .education , .award{
+    @include ul-list-style(200px, 35px, 35px,17px);
 
   }
+
+  /*每一页内容的盒子*/
+  .box {
+    width: 800px;
+    height: $basic-info-height;
+    margin: 0 auto;
+    display: table;
+    padding-top: 25px;
+
+    .tb-cell {
+      display: table-cell; /*span内部的内容就相当于表格*/
+      vertical-align: middle; /*vertical-align属性来对齐其中的内容*/
+      text-align: center;
+
+      ul {
+        margin: 15px auto;
+        text-align: left;
+
+
+        li {
+          display: block;
+          width: 100%;
+          margin: 10px auto;
+          color: #f7f7f7;
+          a {
+            color: #f7f7f7;
+          }
+          .bg-icon {
+            float: left;
+            display: inline-block;
+            width: 80px;
+          }
+
+        }
+      }
+
+      /*循环遍历每个背景图标*/
+      $contact: phone, email, weixin, github, position,degree;
+      @each $contact-style in $contact {
+        .#{$contact-style} {
+          background: url("../img/#{$contact-style}.png") no-repeat center;
+        }
+      }
+
+      span {
+        float: left;
+      }
+    }
+  }
 }
+
+
 
