@@ -1,0 +1,113 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: 'Microsoft Yahei'; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/*头部*/
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 20px;
+  z-index: 50;
+  /*菜单栏*/ }
+  header #menu {
+    width: 575px;
+    height: 40px;
+    margin: 0 auto;
+    /*当前的菜单栏页*/ }
+    header #menu li {
+      float: left; }
+      header #menu li a {
+        display: block;
+        margin: 0 25px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px; }
+    header #menu .active a {
+      border-bottom: 2px solid white;
+      transition: 0.6s; }
+
+/*中间主要内容*/
+#main .section {
+  text-align: center;
+  /*个人头像*/ }
+  #main .section h1 {
+    font-size: 32px;
+    color: white;
+    margin: 12px auto; }
+  #main .section h2 {
+    font-size: 20px;
+    color: #152b40; }
+  #main .section .my-photo {
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.01);
+    transition: 1s; }
+    #main .section .my-photo img {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%; }
+#main .active .my-photo {
+  opacity: 1;
+  transform: scale(1); }
+#main .s1 {
+  /*个人信息*/ }
+  #main .s1 .basic-info-box {
+    width: 800px;
+    height: 480px;
+    margin: 0 auto;
+    display: table;
+    padding-top: 25px; }
+    #main .s1 .basic-info-box .basic-info {
+      display: table-cell;
+      /*span内部的内容就相当于表格*/
+      vertical-align: middle;
+      /*vertical-align属性来对齐其中的内容*/
+      text-align: center; }
+      #main .s1 .basic-info-box .basic-info .basic-info-text {
+        /*具体个人信息*/ }
+        #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info {
+          width: 300px;
+          margin: 15px auto;
+          text-align: left;
+          font-size: 15px;
+          padding-left: 50px; }
+          #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li {
+            display: block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            margin: 10px auto;
+            color: #f7f7f7;
+            /*循环遍历每个背景图标*/ }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li a {
+              color: #f7f7f7; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .info-style {
+              float: left;
+              display: inline-block;
+              width: 80px;
+              height: 25px; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .phone {
+              background: url("../img/phone.png") no-repeat center bottom; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .email {
+              background: url("../img/email.png") no-repeat center bottom; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .weixin {
+              background: url("../img/weixin.png") no-repeat center bottom; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .github {
+              background: url("../img/github.png") no-repeat center bottom; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li .position {
+              background: url("../img/position.png") no-repeat center bottom; }
+            #main .s1 .basic-info-box .basic-info .basic-info-text .detail-info li span {
+              float: left; }
+
+/*# sourceMappingURL=style.css.map */

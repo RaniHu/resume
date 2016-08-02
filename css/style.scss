@@ -1,0 +1,166 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Microsoft Yahei';
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*头部*/
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 20px;
+  z-index: 50;
+
+  /*菜单栏*/
+  #menu {
+    width: 575px;
+    height: 40px;
+    margin: 0 auto;
+    li {
+      float: left;
+      a {
+        display: block;
+        margin: 0 25px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px;
+
+      }
+    }
+
+    /*当前的菜单栏页*/
+    .active {
+
+      a {
+        //background-color: darkred;
+        border-bottom: 2px solid white;
+        transition: 0.6s;
+      }
+    }
+  }
+}
+
+$basic-info-height: 480px;
+/*中间主要内容*/
+#main {
+
+  .section {
+    text-align: center;
+
+    h1 {
+      font-size: 32px;
+      color: white;
+      margin: 12px auto;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #152b40;
+    }
+
+    /*个人头像*/
+    .my-photo {
+      //width: 100%;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.01);
+      transition: 1s;
+
+      img {
+        width: 165px;
+        height: 165px;
+        border-radius: 50%;
+      }
+    }
+
+
+
+  }
+
+  .active {
+
+    .my-photo{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .s1 {
+
+    /*个人信息*/
+    .basic-info-box{
+      width: 800px;
+      height: $basic-info-height;
+      margin: 0 auto;
+      display: table;
+      padding-top: 25px;
+
+      .basic-info {
+        display: table-cell;        /*span内部的内容就相当于表格*/
+        vertical-align: middle;     /*vertical-align属性来对齐其中的内容*/
+        text-align: center;
+
+
+        .basic-info-text {
+          //width: 100%;
+
+          /*具体个人信息*/
+          .detail-info{
+            width: 300px;
+            margin: 15px auto;
+            text-align: left;
+            font-size: 15px;
+            padding-left: 50px;
+
+            li{
+              display: block;
+              width: 100%;
+              height: 25px;
+              line-height: 25px;
+              margin: 10px auto;
+              color: #f7f7f7;
+              a{
+                color:#f7f7f7 ;
+              }
+              .info-style{
+                float: left;
+                display: inline-block;
+                width: 80px;
+                height: 25px;
+
+
+              }
+
+              /*循环遍历每个背景图标*/
+              $contact:phone,email,weixin,github,position;
+              @each $contact-style in $contact {
+                .#{$contact-style} {
+                  background: url("../img/#{$contact-style}.png") no-repeat center bottom;
+                }
+              }
+
+              span{
+                float: left;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
