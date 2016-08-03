@@ -207,37 +207,37 @@ $transition-delay:0.5s;
 
   /*第四页*/
   .s4 {
-    .box .tb-cell{
+    .box div{
       margin-top: 100px;
       text-align: center;
     }
-    @at-root
-    .s4.active {
-      .education{
-        @include transform(translateX(0));
-      }
-      .award{
-        @include transform(translateX(0));                   //从下往上滑入效果
-      }
-    };
-
     .education {
-      @include ul-list-style(250px, 35px, 35px, 17px);
-      @include transform(translateX(-2000px));                   //从下往上滑入效果
-      @include transition(1s);
       float: left;
+      @include ul-list-style(250px, 35px, 35px, 17px);
+      @include transform(translateX(-1000px));                 //文字由左向中间滑动
     }
     .award {
-      @include ul-list-style(400px, 35px, 35px, 17px);
-      @include transform(translateX(2000px));                   //从下往上滑入效果
-      @include transition(1s);
-      transition-delay:$transition-delay ;
       float: right;
+      @include ul-list-style(400px, 35px, 35px, 17px);
+      @include transform(translateX(1000px));                 //文字由右向中间滑动
       li {
-          width: 300px;
-        }
-
+        width: 300px;
+      }
     }
+
+    @at-root
+    .s4.active {
+      .box div{
+        @include transform(translateX(0));
+        @include transition(1s);
+        &:nth-child(1){
+          transition-delay: $transition-delay*0.6;
+        }
+        &:nth-child(2){
+          transition-delay: $transition-delay*1.5;
+        }
+      }
+    };
   }
 
   /*第五页*/
@@ -260,9 +260,9 @@ $transition-delay:0.5s;
         &:nth-child(1){
           transition-delay: $transition-delay;
         }&:nth-child(2){
-          transition-delay: $transition-delay * 1.5;
+          transition-delay: $transition-delay * 1.2;
         }&:nth-child(3){
-          transition-delay: $transition-delay * 2.5;
+          transition-delay: $transition-delay * 1.5;
         }
       }
     }

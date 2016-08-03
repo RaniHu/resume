@@ -161,33 +161,16 @@ header {
   transition: 0.8s 0.5s; }
 
 /*第四页*/
-.s4 .box .tb-cell {
+.s4 .box div {
   margin-top: 100px;
   text-align: center; }
-.s4.active .education {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0); }
-.s4.active .award {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0); }
 .s4 .education {
-  -webkit-transform: translateX(-2000px);
-  -moz-transform: translateX(-2000px);
-  -ms-transform: translateX(-2000px);
-  -o-transform: translateX(-2000px);
-  transform: translateX(-2000px);
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transiton: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  float: left; }
+  float: left;
+  -webkit-transform: translateX(-1000px);
+  -moz-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  -o-transform: translateX(-1000px);
+  transform: translateX(-1000px); }
   .s4 .education ul {
     width: 250px;
     font-size: 17px; }
@@ -197,18 +180,12 @@ header {
   .s4 .education .bg-icon {
     height: 35px; }
 .s4 .award {
-  -webkit-transform: translateX(2000px);
-  -moz-transform: translateX(2000px);
-  -ms-transform: translateX(2000px);
-  -o-transform: translateX(2000px);
-  transform: translateX(2000px);
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transiton: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  transition-delay: 0.5s;
-  float: right; }
+  float: right;
+  -webkit-transform: translateX(1000px);
+  -moz-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  -o-transform: translateX(1000px);
+  transform: translateX(1000px); }
   .s4 .award ul {
     width: 400px;
     font-size: 17px; }
@@ -219,6 +196,21 @@ header {
     height: 35px; }
   .s4 .award li {
     width: 300px; }
+.s4.active .box div {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transiton: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .s4.active .box div:nth-child(1) {
+    transition-delay: 0.3s; }
+  .s4.active .box div:nth-child(2) {
+    transition-delay: 0.75s; }
 
 /*第五页*/
 .s5 ul {
@@ -234,8 +226,8 @@ header {
   .s5.active ul li:nth-child(1) {
     transition-delay: 0.5s; }
   .s5.active ul li:nth-child(2) {
-    transition-delay: 0.75s; }
+    transition-delay: 0.6s; }
   .s5.active ul li:nth-child(3) {
-    transition-delay: 1.25s; }
+    transition-delay: 0.75s; }
 
 /*# sourceMappingURL=style.css.map */
