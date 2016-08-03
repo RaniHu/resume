@@ -1,46 +1,241 @@
 @charset "UTF-8";
-* { padding: 0; margin: 0; }
+* {
+  padding: 0;
+  margin: 0; }
 
-body { font-family: 'Microsoft Yahei'; }
+body {
+  font-family: 'Microsoft Yahei'; }
 
-li { list-style: none; }
+li {
+  list-style: none; }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none; }
+
+.clearfix {
+  clear: both; }
 
 /*头部*/
-header { width: 100%; position: fixed; left: 0; top: 20px; z-index: 50 /*菜单栏*/ }
-header #menu { width: 575px; height: 40px; margin: 0 auto /*当前的菜单栏页*/ }
-header #menu li { float: left; }
-header #menu li a { display: block; margin: 0 25px; line-height: 40px; color: #fff; font-size: 16px; }
-header #menu .active a { border-bottom: 2px solid white; -webkit-transition: 0.6s; transition: 0.6s; }
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 20px;
+  z-index: 50;
+  /*菜单栏*/ }
+  header #menu {
+    width: 575px;
+    height: 40px;
+    margin: 0 auto;
+    /*当前的菜单栏页*/ }
+    header #menu li {
+      float: left; }
+      header #menu li a {
+        display: block;
+        margin: 0 25px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px; }
+    header #menu .active a {
+      border-bottom: 2px solid white;
+      transition: 0.6s; }
 
 /*中间主要内容*/
-#main { /*每一页*/ /*当前页*/ /*每一页下的ul样式*/ /*每一页内容的盒子*/ }
-#main .section { text-align: center /*个人头像*/ }
-#main .section h1 { font-size: 32px; color: white; margin: 12px auto; }
-#main .section h2 { font-size: 20px; color: #105752; }
-#main .section .my-photo { text-align: center; opacity: 0; -webkit-transform: scale(0.01); -ms-transform: scale(0.01); transform: scale(0.01); -webkit-transition: 1s; transition: 1s; }
-#main .section .my-photo img { width: 165px; height: 165px; border-radius: 50%; }
-#main .active .my-photo { opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
-#main .home ul { width: 300px; font-size: 15px; }
-#main .home ul li { height: 25px; line-height: 25px; }
-#main .home .bg-icon { height: 25px; }
-#main .home ul { padding-left: 50px; }
-#main .education ul, #main .award ul { width: 200px; font-size: 17px; }
-#main .education ul li, #main .award ul li { height: 35px; line-height: 35px; }
-#main .education .bg-icon, #main .award .bg-icon { height: 35px; }
-#main .box { width: 800px; height: 480px; margin: 0 auto; display: table; padding-top: 25px; }
-#main .box .tb-cell { display: table-cell; /*span内部的内容就相当于表格*/ vertical-align: middle; /*vertical-align属性来对齐其中的内容*/ text-align: center /*循环遍历每个背景图标*/ }
-#main .box .tb-cell ul { margin: 15px auto; text-align: left; }
-#main .box .tb-cell ul li { display: block; width: 100%; margin: 10px auto; color: #f7f7f7; }
-#main .box .tb-cell ul li a { color: #f7f7f7; }
-#main .box .tb-cell ul li .bg-icon { float: left; display: inline-block; width: 80px; }
-#main .box .tb-cell .phone { background: url("../img/phone.png") no-repeat center; }
-#main .box .tb-cell .email { background: url("../img/email.png") no-repeat center; }
-#main .box .tb-cell .weixin { background: url("../img/weixin.png") no-repeat center; }
-#main .box .tb-cell .github { background: url("../img/github.png") no-repeat center; }
-#main .box .tb-cell .position { background: url("../img/position.png") no-repeat center; }
-#main .box .tb-cell .degree { background: url("../img/degree.png") no-repeat center; }
-#main .box .tb-cell span { float: left; }
+#main {
+  /*公共区*/
+  /*公共区每一页内容的盒子*/ }
+  #main .section {
+    text-align: center; }
+    #main .section h1 {
+      font-size: 32px;
+      color: white;
+      margin: 12px auto; }
+    #main .section h2 {
+      font-size: 20px;
+      color: #105752; }
+  #main .box {
+    height: 480px;
+    margin: 0 auto;
+    display: table;
+    padding-top: 25px;
+    text-align: center; }
+    #main .box .tb-cell {
+      display: table-cell;
+      /*span内部的内容就相当于表格*/
+      vertical-align: middle;
+      /*vertical-align属性来对齐其中的内容*/
+      text-align: center; }
+      #main .box .tb-cell ul {
+        margin: 15px auto; }
+        #main .box .tb-cell ul li {
+          margin: 10px auto;
+          color: #f7f7f7;
+          /*循环遍历每个背景图标*/ }
+          #main .box .tb-cell ul li a {
+            color: #f7f7f7; }
+          #main .box .tb-cell ul li .bg-icon {
+            float: left;
+            display: inline-block;
+            width: 80px; }
+          #main .box .tb-cell ul li span {
+            float: left; }
+          #main .box .tb-cell ul li .phone {
+            background: url("../img/phone.png") no-repeat center; }
+          #main .box .tb-cell ul li .email {
+            background: url("../img/email.png") no-repeat center; }
+          #main .box .tb-cell ul li .weixin {
+            background: url("../img/weixin.png") no-repeat center; }
+          #main .box .tb-cell ul li .github {
+            background: url("../img/github.png") no-repeat center; }
+          #main .box .tb-cell ul li .location {
+            background: url("../img/location.png") no-repeat center; }
+          #main .box .tb-cell ul li .degree {
+            background: url("../img/degree.png") no-repeat center; }
+          #main .box .tb-cell ul li .university {
+            background: url("../img/university.png") no-repeat center; }
+          #main .box .tb-cell ul li .major {
+            background: url("../img/major.png") no-repeat center; }
+          #main .box .tb-cell ul li .award-list {
+            background: url("../img/award-list.png") no-repeat center; }
+          #main .box .tb-cell ul li .position {
+            background: url("../img/position.png") no-repeat center; }
+
+/*公共区每一页下的ul样式*/
+/*第一页*/
+.s1 {
+  /*首页*/
+  /*我的头像*/ }
+  .s1 .home ul {
+    width: 300px;
+    font-size: 15px; }
+    .s1 .home ul li {
+      height: 25px;
+      line-height: 25px; }
+  .s1 .home .bg-icon {
+    height: 25px; }
+  .s1 .home ul {
+    padding-left: 50px;
+    text-align: left; }
+  .s1 .my-photo {
+    text-align: center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0.01);
+    -moz-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    transform: scale(0.01);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transiton: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+    .s1 .my-photo img {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%; }
+  .s1.active .my-photo {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+
+/*第三页*/
+.s3 ul {
+  width: 1000px;
+  margin: 0 auto; }
+  .s3 ul li {
+    float: left;
+    margin: 0 10px; }
+    .s3 ul li:nth-child(1) {
+      transform: translateX(0); }
+    .s3 ul li:nth-child(2) {
+      transform: translateX(-320px); }
+    .s3 ul li:nth-child(3) {
+      transform: translateX(-660px); }
+.s3.active ul li {
+  transform: translateX(0);
+  transition: 0.8s 0.5s; }
+
+/*第四页*/
+.s4 .box .tb-cell {
+  margin-top: 100px;
+  text-align: center; }
+.s4.active .education {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+.s4.active .award {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+.s4 .education {
+  -webkit-transform: translateX(-2000px);
+  -moz-transform: translateX(-2000px);
+  -ms-transform: translateX(-2000px);
+  -o-transform: translateX(-2000px);
+  transform: translateX(-2000px);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transiton: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  float: left; }
+  .s4 .education ul {
+    width: 250px;
+    font-size: 17px; }
+    .s4 .education ul li {
+      height: 35px;
+      line-height: 35px; }
+  .s4 .education .bg-icon {
+    height: 35px; }
+.s4 .award {
+  -webkit-transform: translateX(2000px);
+  -moz-transform: translateX(2000px);
+  -ms-transform: translateX(2000px);
+  -o-transform: translateX(2000px);
+  transform: translateX(2000px);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transiton: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  transition-delay: 0.5s;
+  float: right; }
+  .s4 .award ul {
+    width: 400px;
+    font-size: 17px; }
+    .s4 .award ul li {
+      height: 35px;
+      line-height: 35px; }
+  .s4 .award .bg-icon {
+    height: 35px; }
+  .s4 .award li {
+    width: 300px; }
+
+/*第五页*/
+.s5 ul {
+  width: 1000px;
+  margin: 0 auto; }
+  .s5 ul li {
+    float: left;
+    margin: 0 10px;
+    transform: translateY(1000px); }
+.s5.active ul li {
+  transform: translateY(0);
+  transition: 0.8s; }
+  .s5.active ul li:nth-child(1) {
+    transition-delay: 0.5s; }
+  .s5.active ul li:nth-child(2) {
+    transition-delay: 0.75s; }
+  .s5.active ul li:nth-child(3) {
+    transition-delay: 1.25s; }
 
 /*# sourceMappingURL=style.css.map */
