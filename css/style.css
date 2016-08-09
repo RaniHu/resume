@@ -45,7 +45,9 @@ header {
   /*公共区*/
   /*公共区每一页内容的盒子*/ }
   #main .section {
-    text-align: center; }
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
     #main .section h1 {
       font-size: 32px;
       color: white;
@@ -54,11 +56,10 @@ header {
       font-size: 20px;
       color: #105752; }
   #main .box {
-    height: 480px;
+    width: auto;
+    height: auto;
     margin: 0 auto;
-    display: table;
-    padding-top: 25px;
-    text-align: center; }
+    display: table; }
     #main .box .tb-cell {
       display: table-cell;
       /*span内部的内容就相当于表格*/
@@ -102,9 +103,37 @@ header {
 
 /*公共区每一页下的ul样式*/
 /*第一页*/
+@-webkit-keyframes photo {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes photo {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 .s1 {
   /*首页*/
   /*我的头像*/ }
+  .s1 .box {
+    padding-top: 40px; }
   .s1 .home ul {
     width: 300px;
     font-size: 15px; }
@@ -117,6 +146,7 @@ header {
     padding-left: 50px;
     text-align: left; }
   .s1 .my-photo {
+    margin: 10px auto;
     text-align: center;
     opacity: 0;
     filter: alpha(opacity=0);
@@ -133,7 +163,25 @@ header {
     .s1 .my-photo img {
       width: 165px;
       height: 165px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      transition: 0.5s; }
+      .s1 .my-photo img:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transiton: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        box-shadow: 0 0 5px 5px rgba(204, 204, 204, 0.7); }
   .s1.active .my-photo {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -142,6 +190,237 @@ header {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); }
+
+/*第二页弹性动画*/
+/*定义时间帧*/
+@-webkit-keyframes move1 {
+  0% {
+    -webkit-transform: translate(320px, -1000px);
+    -moz-transform: translate(320px, -1000px);
+    -ms-transform: translate(320px, -1000px);
+    -o-transform: translate(320px, -1000px);
+    transform: translate(320px, -1000px); }
+  20% {
+    -webkit-transform: translate(320px, 0px);
+    -moz-transform: translate(320px, 0px);
+    -ms-transform: translate(320px, 0px);
+    -o-transform: translate(320px, 0px);
+    transform: translate(320px, 0px); }
+  40% {
+    -webkit-transform: translate(320px, -50px);
+    -moz-transform: translate(320px, -50px);
+    -ms-transform: translate(320px, -50px);
+    -o-transform: translate(320px, -50px);
+    transform: translate(320px, -50px); }
+  60% {
+    -webkit-transform: translate(320px, 0px);
+    -moz-transform: translate(320px, 0px);
+    -ms-transform: translate(320px, 0px);
+    -o-transform: translate(320px, 0px);
+    transform: translate(320px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+@keyframes move1 {
+  0% {
+    -webkit-transform: translate(320px, -1000px);
+    -moz-transform: translate(320px, -1000px);
+    -ms-transform: translate(320px, -1000px);
+    -o-transform: translate(320px, -1000px);
+    transform: translate(320px, -1000px); }
+  20% {
+    -webkit-transform: translate(320px, 0px);
+    -moz-transform: translate(320px, 0px);
+    -ms-transform: translate(320px, 0px);
+    -o-transform: translate(320px, 0px);
+    transform: translate(320px, 0px); }
+  40% {
+    -webkit-transform: translate(320px, -50px);
+    -moz-transform: translate(320px, -50px);
+    -ms-transform: translate(320px, -50px);
+    -o-transform: translate(320px, -50px);
+    transform: translate(320px, -50px); }
+  60% {
+    -webkit-transform: translate(320px, 0px);
+    -moz-transform: translate(320px, 0px);
+    -ms-transform: translate(320px, 0px);
+    -o-transform: translate(320px, 0px);
+    transform: translate(320px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: translate(0px, -1000px);
+    -moz-transform: translate(0px, -1000px);
+    -ms-transform: translate(0px, -1000px);
+    -o-transform: translate(0px, -1000px);
+    transform: translate(0px, -1000px); }
+  20% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  40% {
+    -webkit-transform: translate(0px, -50px);
+    -moz-transform: translate(0px, -50px);
+    -ms-transform: translate(0px, -50px);
+    -o-transform: translate(0px, -50px);
+    transform: translate(0px, -50px); }
+  60% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+@keyframes move2 {
+  0% {
+    -webkit-transform: translate(0px, -1000px);
+    -moz-transform: translate(0px, -1000px);
+    -ms-transform: translate(0px, -1000px);
+    -o-transform: translate(0px, -1000px);
+    transform: translate(0px, -1000px); }
+  20% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  40% {
+    -webkit-transform: translate(0px, -50px);
+    -moz-transform: translate(0px, -50px);
+    -ms-transform: translate(0px, -50px);
+    -o-transform: translate(0px, -50px);
+    transform: translate(0px, -50px); }
+  60% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+@-webkit-keyframes move3 {
+  0% {
+    -webkit-transform: translate(-320px, -1000px);
+    -moz-transform: translate(-320px, -1000px);
+    -ms-transform: translate(-320px, -1000px);
+    -o-transform: translate(-320px, -1000px);
+    transform: translate(-320px, -1000px); }
+  20% {
+    -webkit-transform: translate(-320px, 0px);
+    -moz-transform: translate(-320px, 0px);
+    -ms-transform: translate(-320px, 0px);
+    -o-transform: translate(-320px, 0px);
+    transform: translate(-320px, 0px); }
+  40% {
+    -webkit-transform: translate(-320px, -50px);
+    -moz-transform: translate(-320px, -50px);
+    -ms-transform: translate(-320px, -50px);
+    -o-transform: translate(-320px, -50px);
+    transform: translate(-320px, -50px); }
+  60% {
+    -webkit-transform: translate(-320px, 0px);
+    -moz-transform: translate(-320px, 0px);
+    -ms-transform: translate(-320px, 0px);
+    -o-transform: translate(-320px, 0px);
+    transform: translate(-320px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+@keyframes move3 {
+  0% {
+    -webkit-transform: translate(-320px, -1000px);
+    -moz-transform: translate(-320px, -1000px);
+    -ms-transform: translate(-320px, -1000px);
+    -o-transform: translate(-320px, -1000px);
+    transform: translate(-320px, -1000px); }
+  20% {
+    -webkit-transform: translate(-320px, 0px);
+    -moz-transform: translate(-320px, 0px);
+    -ms-transform: translate(-320px, 0px);
+    -o-transform: translate(-320px, 0px);
+    transform: translate(-320px, 0px); }
+  40% {
+    -webkit-transform: translate(-320px, -50px);
+    -moz-transform: translate(-320px, -50px);
+    -ms-transform: translate(-320px, -50px);
+    -o-transform: translate(-320px, -50px);
+    transform: translate(-320px, -50px); }
+  60% {
+    -webkit-transform: translate(-320px, 0px);
+    -moz-transform: translate(-320px, 0px);
+    -ms-transform: translate(-320px, 0px);
+    -o-transform: translate(-320px, 0px);
+    transform: translate(-320px, 0px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+.s2 ul {
+  width: 1000px;
+  margin: 0 auto; }
+  .s2 ul li {
+    float: left;
+    margin: 0 10px; }
+    .s2 ul li:nth-child(1) {
+      -webkit-transform: translate(320px, -1000px);
+      -moz-transform: translate(320px, -1000px);
+      -ms-transform: translate(320px, -1000px);
+      -o-transform: translate(320px, -1000px);
+      transform: translate(320px, -1000px); }
+    .s2 ul li:nth-child(2) {
+      -webkit-transform: translate(0px, -1000px);
+      -moz-transform: translate(0px, -1000px);
+      -ms-transform: translate(0px, -1000px);
+      -o-transform: translate(0px, -1000px);
+      transform: translate(0px, -1000px); }
+    .s2 ul li:nth-child(3) {
+      -webkit-transform: translate(-320px, -1000px);
+      -moz-transform: translate(-320px, -1000px);
+      -ms-transform: translate(-320px, -1000px);
+      -o-transform: translate(-320px, -1000px);
+      transform: translate(-320px, -1000px); }
+.s2.active li:nth-child(1) {
+  -webkit-animation: move1 1s 0.5s forwards;
+  -moz-animation: move1 1s 0.5s forwards;
+  -ms-animation: move1 1s 0.5s forwards;
+  -o-animation: move1 1s 0.5s forwards;
+  animation: move1 1s 0.5s forwards; }
+.s2.active li:nth-child(2) {
+  -webkit-animation: move2 1s 0.5s forwards;
+  -moz-animation: move2 1s 0.5s forwards;
+  -ms-animation: move2 1s 0.5s forwards;
+  -o-animation: move2 1s 0.5s forwards;
+  animation: move2 1s 0.5s forwards; }
+.s2.active li:nth-child(3) {
+  -webkit-animation: move3 1s 0.5s forwards;
+  -moz-animation: move3 1s 0.5s forwards;
+  -ms-animation: move3 1s 0.5s forwards;
+  -o-animation: move3 1s 0.5s forwards;
+  animation: move3 1s 0.5s forwards; }
 
 /*第三页*/
 .s3 ul {
@@ -161,9 +440,6 @@ header {
   transition: 0.8s 0.5s; }
 
 /*第四页*/
-.s4 .box div {
-  margin-top: 100px;
-  text-align: center; }
 .s4 .education {
   float: left;
   -webkit-transform: translateX(-1000px);

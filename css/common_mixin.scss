@@ -27,3 +27,25 @@
   opacity: $opacity;
   filter: alpha(opacity=$opacity * 100);
 }
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+@mixin transition-delay($transition-delay){
+  -webkit-transition-delay: $transition-delay;
+  -moz-transition-delay: $transition-delay;
+  -ms-transition-delay: $transition-delay;
+  -o-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+@mixin text-size-adjust{            //屏幕旋转时文字大小不会随之改变
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}

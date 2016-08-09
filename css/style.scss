@@ -66,7 +66,9 @@ $transition-delay:0.5s;
 
   /*公共区*/
   .section {
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
     h1 {
       font-size: 32px;
@@ -82,11 +84,10 @@ $transition-delay:0.5s;
 
   /*公共区每一页内容的盒子*/
   .box {
-    height: $basic-info-height;
+    width: auto;
+    height: auto;
     margin: 0 auto;
     display: table;
-    padding-top: 25px;
-    text-align: center;
 
     .tb-cell {
       display: table-cell; /*span内部的内容就相当于表格*/
@@ -138,9 +139,22 @@ $transition-delay:0.5s;
     }
   }
 
-  /*第一页*/
+
+/*第一页*/
+@-webkit-keyframes photo {
+  0%{@include transform(rotate(0deg))}
+  100%{@include transform(rotate(360deg))}
+}
+@keyframes photo {
+  0%{@include transform(rotate(0deg))}
+  100%{@include transform(rotate(360deg))}
+}
+
   .s1 {
     /*首页*/
+    .box {
+      padding-top: 40px;
+    }
     .home {
       @include ul-list-style(300px, 25px, 25px, 15px);
       ul {
@@ -150,6 +164,7 @@ $transition-delay:0.5s;
     }
     /*我的头像*/
     .my-photo {
+      margin: 10px auto;
       text-align: center;
       @include opacity(0);
       @include transform(scale(0.01));
@@ -159,6 +174,13 @@ $transition-delay:0.5s;
         width: 165px;
         height: 165px;
         border-radius: 50%;
+        transition: 0.5s;
+        &:hover{
+          @include transform(scale(1.2));
+          @include transform(translateY(-5px));
+          @include transition(0.5s);
+          box-shadow: 0 0 5px 5px rgba(204, 204, 204, 0.7);
+        }
       }
     }
     @at-root                        //跳出.s1这一嵌套层
@@ -172,7 +194,152 @@ $transition-delay:0.5s;
   }
 
 
-  /*第三页*/
+/*第二页弹性动画*/
+/*定义时间帧*/
+@-webkit-keyframes move1 {
+  0% {
+    @include transform(translate(320px, -1000px))
+  }
+  20% {
+    @include transform(translate(320px, 0px))
+  }
+  40% {
+    @include transform(translate(320px, -50px))
+  }
+  60% {
+    @include transform(translate(320px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+@keyframes move1 {
+  0% {
+    @include transform(translate(320px, -1000px))
+  }
+  20% {
+    @include transform(translate(320px, 0px))
+  }
+  40% {
+    @include transform(translate(320px, -50px))
+  }
+  60% {
+    @include transform(translate(320px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    @include transform(translate(0px, -1000px))
+  }
+  20% {
+    @include transform(translate(0px, 0px))
+  }
+  40% {
+    @include transform(translate(0px, -50px))
+  }
+  60% {
+    @include transform(translate(0px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+@keyframes move2 {
+  0% {
+    @include transform(translate(0px, -1000px))
+  }
+  20% {
+    @include transform(translate(0px, 0px))
+  }
+  40% {
+    @include transform(translate(0px, -50px))
+  }
+  60% {
+    @include transform(translate(0px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+@-webkit-keyframes move3 {
+  0% {
+    @include transform(translate(-320px, -1000px))
+  }
+  20% {
+    @include transform(translate(-320px, 0px))
+  }
+  40% {
+    @include transform(translate(-320px, -50px))
+  }
+  60% {
+    @include transform(translate(-320px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+@keyframes move3 {
+  0% {
+    @include transform(translate(-320px, -1000px))
+  }
+  20% {
+    @include transform(translate(-320px, 0px))
+  }
+  40% {
+    @include transform(translate(-320px, -50px))
+  }
+  60% {
+    @include transform(translate(-320px, 0px))
+  }
+  100% {
+    @include transform(translate(0px, 0px))
+  }
+}
+
+.s2 {
+  ul {
+    width: 1000px;
+    margin: 0 auto;
+    li {
+      float: left;
+      margin: 0 10px;
+      &:nth-child(1) {
+        @include transform(translate(320px, -1000px));
+      }
+      &:nth-child(2) {
+        @include transform(translate(0px, -1000px));
+      }
+      &:nth-child(3) {
+        @include transform(translate(-320px, -1000px));
+      }
+    }
+  }
+  @at-root
+  .s2.active {
+    li {
+      &:nth-child(1) {
+        @include animation(move1 1s $transition-delay forwards) //forwards为停留在最后一个动画
+      }
+      &:nth-child(2) {
+        @include animation(move2 1s $transition-delay forwards)
+      }
+      &:nth-child(3) {
+        @include animation(move3 1s $transition-delay forwards)
+      }
+    }
+  }
+}
+
+
+/*第三页*/
   .s3{
     ul{
       width: 1000px;
@@ -207,10 +374,6 @@ $transition-delay:0.5s;
 
   /*第四页*/
   .s4 {
-    .box div{
-      margin-top: 100px;
-      text-align: center;
-    }
     .education {
       float: left;
       @include ul-list-style(250px, 35px, 35px, 17px);

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>胡冉的简历</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.9.1-min.js"></script>
@@ -15,7 +16,7 @@
         <li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
         <li data-menuanchor="page3"><a href="#page3">项目经验</a></li>
         <li data-menuanchor="page4"><a href="#page4">个人信息</a></li>
-        <li data-menuanchor="page5"><a href="#page5">联系方式</a></li>
+        <li data-menuanchor="page5"><a href="#page5">关于我</a></li>
     </ul>
 </header>
 
@@ -43,25 +44,11 @@
         </div>
     </section>
     <section class="section s2">
-
-        <div class="slide">
-            <h1>第二页的第一部分</h1>
-
-            <h2>hello</h2>
-
-        </div>
-        <div class="slide">
-            <h1>第二页的第二部分</h1>
-
-        </div>
-        <div class="slide">
-            <h1>第二页的第三部分</h1>
-
-        </div>
-        <div class="slide">
-            <h1>第二页的第四部分</h1>
-
-        </div>
+        <ul class="food">
+            <li><img src="img/s3/food1.jpg"></li>
+            <li><img src="img/s3/food3.jpg"></li>
+            <li><img src="img/s3/food2.jpg"></li>
+        </ul>
     </section>
     <section class="section s3">
         <ul class="food">
@@ -106,6 +93,7 @@
         $("#main").fullpage({
             verticalCentered: true,                                       //内容垂直居中
             css3: true,
+            resize:true,
             sectionsColor: ['#23BBB1', '#666699', '#007b52', '#009966', '#336699'],   //设置每一页背景颜色
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],                   //定义锚链接
             scrollingSpeed: 500,                                              //滚动速度
