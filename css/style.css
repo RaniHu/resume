@@ -453,6 +453,8 @@ header {
       line-height: 35px; }
   .s4 .education .bg-icon {
     height: 35px; }
+  .s4 .education h1 {
+    padding-left: 50px; }
 .s4 .award {
   float: right;
   -webkit-transform: translateX(1000px);
@@ -533,18 +535,47 @@ header {
       font-size: 14px; }
 
   /*教育背景*/
-  #main .section.s4 h1 {
-    font-size: 20px; }
-
   .section.s4 .award ul {
     width: 280px; }
-  .section.s4 .education ul {
+  .section.s4 .education
+  h1 {
+    padding-left: 70px; }
+  .section.s4 ul {
     width: 200px; }
   .section.s4 span {
     font-size: 13px; } }
 @media screen and (max-width: 480px) {
+  /*背景图标*/
+  #main .box .tb-cell ul li .bg-icon {
+    width: 50px;
+    background-size: 40%; }
+
+  .s1 ul.contact {
+    width: 220px;
+    padding-left: 30px; }
+  .s1 .home ul {
+    font-size: 13px; }
+    .s1 .home ul li {
+      height: 25px;
+      line-height: 25px; }
+  .s1 .my-photo {
+    margin: 3px auto; }
+    .s1 .my-photo img {
+      width: 120px;
+      height: 120px; }
+
+  #main .section h1 {
+    font-size: 26px;
+    margin: 5px auto; }
+  #main .section h2 {
+    font-size: 18px; }
+
+  #main .section.s4 h1 {
+    font-size: 20px;
+    font-weight: bold; }
+
   .section.s4 .education h1 {
-    padding-left: 65px; }
+    padding-left: 70px; }
   .section.s4 div {
     clear: both; } }
 @media screen and (max-width: 375px) {
@@ -562,8 +593,12 @@ header {
       margin: 0 6px;
       font-size: 14px; }
 
-  .section.s1 ul.contact {
-    padding-left: 20px; } }
+  #main .section h1 {
+    font-size: 24px; }
+
+  .section.s1 .my-photo img {
+    width: 100px;
+    height: 100px; } }
 @media screen and (max-width: 300px) {
   /*头部菜单栏*/
   header #menu {
@@ -572,8 +607,11 @@ header {
       margin: 0 4px;
       font-size: 14px; }
 
-  .section.s1 ul.contact {
-    padding-left: 2px; } }
+  /*.section.s1 {
+    ul.contact {
+      padding-left: 2px;
+    }
+  }*/ }
 /*@media screen and (max-width: 414px) {
   header #menu {
     width: 75%;

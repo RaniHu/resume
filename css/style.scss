@@ -382,6 +382,9 @@ $transition-delay: 0.5s;
     float: left;
     @include ul-list-style(250px, 35px, 35px, 17px);
     @include transform(translateX(-1000px)); //文字由左向中间滑动
+    h1 {
+      padding-left: 50px;
+    }
   }
   .award {
     float: right;
@@ -482,15 +485,17 @@ $transition-delay: 0.5s;
       font-size: 14px;
     }
   }
+
   /*教育背景*/
-  #main .section.s4 h1 {
-    font-size: 20px;
-  }
   .section.s4 {
     .award ul {
       width: 280px;
     }
-    .education ul{
+    .education
+    h1 {
+      padding-left: 70px;
+    }
+    ul {
       width: 200px;
     }
     span {
@@ -500,17 +505,57 @@ $transition-delay: 0.5s;
 
 }
 
-@media screen and (max-width: 480px){
-  .section.s4{
-    .education h1{
-      padding-left: 65px;
+@media screen and (max-width: 480px) {
+  /*背景图标*/
+  #main .box .tb-cell ul li .bg-icon{
+    width: 50px;
+    background-size: 40%;
+  }
+  .s1{
+      ul.contact {
+        width: 220px;
+        padding-left: 30px;
+      }
+  .home ul{
+    font-size: 13px;
+    li{
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+    .my-photo {
+      margin: 3px auto;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+  }
+  }
+  #main .section{
+  h1 {
+    font-size: 26px;
+    margin: 5px auto;
+  }
+  h2{
+    font-size: 18px;
+  }
+  }
+  #main .section.s4 h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .section.s4 {
+    .education h1 {
+      padding-left: 70px;
     }
     div {
       clear: both;
     }
   }
 }
-@media screen and (max-width: 375px){
+
+@media screen and (max-width: 375px) {
   /*头部菜单栏*/
   header #menu {
     width: 318px;
@@ -521,7 +566,7 @@ $transition-delay: 0.5s;
   }
 }
 
-@media screen and (max-width: 345px){
+@media screen and (max-width: 345px) {
   /*头部菜单栏*/
   header #menu {
     width: 300px;
@@ -530,14 +575,20 @@ $transition-delay: 0.5s;
       font-size: 14px;
     }
   }
-  .section.s1{
-    ul.contact{
-      padding-left: 20px;
-    ;
+  #main .section h1 {
+    font-size: 24px;
+  }
+  .section.s1 {
+    .my-photo {
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }
-@media screen and (max-width: 300px){
+
+@media screen and (max-width: 300px) {
   /*头部菜单栏*/
   header #menu {
     width: 278px;
@@ -546,12 +597,11 @@ $transition-delay: 0.5s;
       font-size: 14px;
     }
   }
-  .section.s1{
-    ul.contact{
+  /*.section.s1 {
+    ul.contact {
       padding-left: 2px;
-    ;
     }
-  }
+  }*/
 }
 
 /*@media screen and (max-width: 414px) {
