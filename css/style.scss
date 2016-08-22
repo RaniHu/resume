@@ -508,8 +508,8 @@ $transition-delay: 0.5s;
 @media screen and (max-width: 480px) {
   /*头部导航栏*/
   header #menu li a{
-    height: 25px;
-    line-height: 25px;
+    height: 30px;
+    line-height: 30px;
   }
   /*背景图标*/
   #main .box .tb-cell ul{
@@ -526,6 +526,9 @@ $transition-delay: 0.5s;
         width: 220px;
         padding-left: 30px;
       }
+    .my-photo{
+      margin: 5px auto;
+    }
   .home ul{
     font-size: 13px;
     li{

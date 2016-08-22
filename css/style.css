@@ -547,8 +547,8 @@ header {
 @media screen and (max-width: 480px) {
   /*头部导航栏*/
   header #menu li a {
-    height: 25px;
-    line-height: 25px; }
+    height: 30px;
+    line-height: 30px; }
 
   /*背景图标*/
   #main .box .tb-cell ul {
@@ -562,6 +562,8 @@ header {
   .s1 ul.contact {
     width: 220px;
     padding-left: 30px; }
+  .s1 .my-photo {
+    margin: 5px auto; }
   .s1 .home ul {
     font-size: 13px; }
     .s1 .home ul li {
