@@ -550,6 +550,7 @@ header {
     width: 50px;
     background-size: 40%; }
 
+  /*首页*/
   .s1 ul.contact {
     width: 220px;
     padding-left: 30px; }
@@ -570,14 +571,26 @@ header {
   #main .section h2 {
     font-size: 18px; }
 
+  /*教育背景*/
+  #main .section.s4 .box .tb-cell ul {
+    margin: 0; }
+    #main .section.s4 .box .tb-cell ul li {
+      margin: 3px auto; }
   #main .section.s4 h1 {
     font-size: 20px;
     font-weight: bold; }
 
-  .section.s4 .education h1 {
-    padding-left: 70px; }
-  .section.s4 div {
-    clear: both; } }
+  .section.s4 {
+    /*  .education,.award ul li{
+        height: 20px;
+        line-height: 20px;
+      }*/ }
+    .section.s4 .award ul {
+      width: 200px; }
+    .section.s4 .education h1 {
+      padding-left: 8px; }
+    .section.s4 div {
+      clear: both; } }
 @media screen and (max-width: 375px) {
   /*头部菜单栏*/
   header #menu {

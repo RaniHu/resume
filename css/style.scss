@@ -511,6 +511,7 @@ $transition-delay: 0.5s;
     width: 50px;
     background-size: 40%;
   }
+  /*首页*/
   .s1{
       ul.contact {
         width: 220px;
@@ -541,13 +542,30 @@ $transition-delay: 0.5s;
     font-size: 18px;
   }
   }
-  #main .section.s4 h1 {
+  /*教育背景*/
+  #main .section.s4{
+    .box .tb-cell ul{
+      margin: 0;
+      li{
+        margin: 3px auto;
+      }
+    }
+
+  h1 {
     font-size: 20px;
     font-weight: bold;
   }
+}
   .section.s4 {
+ /*  .education,.award ul li{
+     height: 20px;
+     line-height: 20px;
+   }*/
+    .award ul {
+      width: 200px;
+    }
     .education h1 {
-      padding-left: 70px;
+      padding-left: 8px;
     }
     div {
       clear: both;
@@ -573,7 +591,7 @@ $transition-delay: 0.5s;
     li a {
       margin: 0 6px;
       font-size: 14px;
-    }
+  }
   }
   #main .section h1 {
     font-size: 24px;
