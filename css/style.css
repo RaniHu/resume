@@ -24,7 +24,7 @@ header {
   z-index: 50;
   /*菜单栏*/ }
   header #menu {
-    width: 575px;
+    width: 540px;
     height: 40px;
     margin: 0 auto;
     /*当前的菜单栏页*/ }
@@ -45,8 +45,6 @@ header {
   /*公共区*/
   /*公共区每一页内容的盒子*/ }
   #main .section {
-    width: 100%;
-    height: 100%;
     overflow: hidden; }
     #main .section h1 {
       font-size: 32px;
@@ -505,5 +503,114 @@ header {
     transition-delay: 0.6s; }
   .s5.active ul li:nth-child(3) {
     transition-delay: 0.75s; }
+
+@media screen and (max-width: 700px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 422px; }
+    header #menu li a {
+      margin: 0 15px;
+      font-size: 16px; }
+
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 26px; } }
+@media screen and (max-width: 650px) {
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 24px; }
+
+  .section.s4 .award ul {
+    width: 300px; }
+  .section.s4 span {
+    font-size: 14px; } }
+@media screen and (max-width: 555px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 358px; }
+    header #menu li a {
+      margin: 0 12px;
+      font-size: 14px; }
+
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 20px; }
+
+  .section.s4 .award ul {
+    width: 280px; }
+  .section.s4 .education ul {
+    width: 200px; }
+  .section.s4 span {
+    font-size: 13px; } }
+@media screen and (max-width: 480px) {
+  .section.s4 .education h1 {
+    padding-left: 65px; }
+  .section.s4 div {
+    clear: both; } }
+@media screen and (max-width: 375px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 318px; }
+    header #menu li a {
+      margin: 0 8px;
+      font-size: 14px; } }
+@media screen and (max-width: 345px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 300px; }
+    header #menu li a {
+      margin: 0 6px;
+      font-size: 14px; }
+
+  .section.s1 ul.contact {
+    padding-left: 20px; } }
+@media screen and (max-width: 300px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 278px; }
+    header #menu li a {
+      margin: 0 4px;
+      font-size: 14px; }
+
+  .section.s1 ul.contact {
+    padding-left: 2px; } }
+/*@media screen and (max-width: 414px) {
+  header #menu {
+    width: 75%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 8px;
+      font-size: 13px;
+    }
+
+  }
+}
+@media screen and (max-width: 375px) {
+  header #menu {
+    width: 75%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 5px;
+      font-size: 13px;
+    }
+
+  }
+}
+@media screen and (max-width: 320px) {
+  header #menu {
+    width: 85%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 5px;
+      font-size: 13px;
+    }
+
+  }
+}
+
+
+
+
+*/
 
 /*# sourceMappingURL=style.css.map */

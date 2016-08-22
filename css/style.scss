@@ -32,7 +32,7 @@ header {
 
   /*菜单栏*/
   #menu {
-    width: 575px;
+    width: 540px;
     height: 40px;
     margin: 0 auto;
     li {
@@ -60,14 +60,12 @@ header {
 }
 
 $basic-info-height: 480px;
-$transition-delay:0.5s;
+$transition-delay: 0.5s;
 /*中间主要内容*/
 #main {
 
   /*公共区*/
   .section {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 
     h1 {
@@ -125,74 +123,81 @@ $transition-delay:0.5s;
 }
 
 /*公共区每一页下的ul样式*/
-  @mixin ul-list-style($ul-width, $li-height, $bg-icon-height,$font-size) {
-    ul {
-      width: $ul-width;
-      font-size: $font-size;
-      li {
-        height: $li-height;
-        line-height: $li-height;
-      }
-    }
-    .bg-icon {
-      height: $bg-icon-height;
+@mixin ul-list-style($ul-width, $li-height, $bg-icon-height,$font-size) {
+  ul {
+    width: $ul-width;
+    font-size: $font-size;
+    li {
+      height: $li-height;
+      line-height: $li-height;
     }
   }
-
+  .bg-icon {
+    height: $bg-icon-height;
+  }
+}
 
 /*第一页*/
 @-webkit-keyframes photo {
-  0%{@include transform(rotate(0deg))}
-  100%{@include transform(rotate(360deg))}
+  0% {
+    @include transform(rotate(0deg))
+  }
+  100% {
+    @include transform(rotate(360deg))
+  }
 }
+
 @keyframes photo {
-  0%{@include transform(rotate(0deg))}
-  100%{@include transform(rotate(360deg))}
+  0% {
+    @include transform(rotate(0deg))
+  }
+  100% {
+    @include transform(rotate(360deg))
+  }
 }
 
-  .s1 {
-    /*首页*/
-    .box {
-      padding-top: 40px;
+.s1 {
+  /*首页*/
+  .box {
+    padding-top: 40px;
+  }
+  .home {
+    @include ul-list-style(300px, 25px, 25px, 15px);
+    ul {
+      padding-left: 50px;
+      text-align: left;
     }
-    .home {
-      @include ul-list-style(300px, 25px, 25px, 15px);
-      ul {
-        padding-left: 50px;
-        text-align: left;
-      }
-    }
-    /*我的头像*/
-    .my-photo {
-      margin: 10px auto;
-      text-align: center;
-      @include opacity(0);
-      @include transform(scale(0.01));
-      @include transition(1s);
+  }
+  /*我的头像*/
+  .my-photo {
+    margin: 10px auto;
+    text-align: center;
+    @include opacity(0);
+    @include transform(scale(0.01));
+    @include transition(1s);
 
-      img {
-        width: 165px;
-        height: 165px;
-        border-radius: 50%;
-        transition: 0.5s;
-        &:hover{
-          @include transform(scale(1.2));
-          @include transform(translateY(-5px));
-          @include transition(0.5s);
-          box-shadow: 0 0 5px 5px rgba(204, 204, 204, 0.7);
-        }
-      }
-    }
-    @at-root                        //跳出.s1这一嵌套层
-    /*第一页为当前页*/
-    .s1.active {
-      .my-photo {
-        @include opacity(1);
-        @include transform(scale(1))
+    img {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      transition: 0.5s;
+      &:hover {
+        @include transform(scale(1.2));
+        @include transform(translateY(-5px));
+        @include transition(0.5s);
+        box-shadow: 0 0 5px 5px rgba(204, 204, 204, 0.7);
       }
     }
   }
-
+  @at-root                        //跳出.s1这一嵌套层
+    /*第一页为当前页*/
+  .s1.active {
+    .my-photo {
+      @include opacity(1);
+      @include transform(scale(1))
+    }
+  }
+}
 
 /*第二页弹性动画*/
 /*定义时间帧*/
@@ -338,77 +343,77 @@ $transition-delay:0.5s;
   }
 }
 
-
 /*第三页*/
-  .s3{
-    ul{
-      width: 1000px;
-      margin: 0 auto;
-      li{
-        float: left;
-        margin: 0 10px;
-        &:nth-child(1){
-          transform: translateX(0);
-        }
-        &:nth-child(2){
-          transform: translateX(-320px);
-
-        }
-        &:nth-child(3){
-          transform: translateX(-660px);
-
-        }
-      }
-    }
-    @at-root
-    .s3.active {
-      ul{
-        li{
-          transform: translateX(0);
-          transition: 0.8s 0.5s;
-        }
-      }
-
-    }
-  }
-
-  /*第四页*/
-  .s4 {
-    .education {
-      float: left;
-      @include ul-list-style(250px, 35px, 35px, 17px);
-      @include transform(translateX(-1000px));                 //文字由左向中间滑动
-    }
-    .award {
-      float: right;
-      @include ul-list-style(400px, 35px, 35px, 17px);
-      @include transform(translateX(1000px));                 //文字由右向中间滑动
-      li {
-        width: 300px;
-      }
-    }
-
-    @at-root
-    .s4.active {
-      .box div{
-        @include transform(translateX(0));
-        @include transition(1s);
-        &:nth-child(1){
-          transition-delay: $transition-delay*0.6;
-        }
-        &:nth-child(2){
-          transition-delay: $transition-delay*1.5;
-        }
-      }
-    };
-  }
-
-  /*第五页*/
-.s5{
-  ul{
+.s3 {
+  ul {
     width: 1000px;
     margin: 0 auto;
-    li{
+    li {
+      float: left;
+      margin: 0 10px;
+      &:nth-child(1) {
+        transform: translateX(0);
+      }
+      &:nth-child(2) {
+        transform: translateX(-320px);
+
+      }
+      &:nth-child(3) {
+        transform: translateX(-660px);
+
+      }
+    }
+  }
+  @at-root
+  .s3.active {
+    ul {
+      li {
+        transform: translateX(0);
+        transition: 0.8s 0.5s;
+      }
+    }
+
+  }
+}
+
+/*第四页*/
+.s4 {
+  .education {
+    float: left;
+    @include ul-list-style(250px, 35px, 35px, 17px);
+    @include transform(translateX(-1000px)); //文字由左向中间滑动
+  }
+  .award {
+    float: right;
+    @include ul-list-style(400px, 35px, 35px, 17px);
+    @include transform(translateX(1000px)); //文字由右向中间滑动
+    li {
+      width: 300px;
+    }
+  }
+
+  @at-root
+  .s4.active {
+    .box div {
+      @include transform(translateX(0));
+      @include transition(1s);
+      &:nth-child(1) {
+        transition-delay: $transition-delay*0.6;
+      }
+      &:nth-child(2) {
+        transition-delay: $transition-delay*1.5;
+      }
+    }
+  }
+;
+}
+
+/*第五页*/
+.s5 {
+  ul {
+    width: 1000px;
+    margin: 0 auto;
+    li {
       float: left;
       margin: 0 10px;
       transform: translateY(1000px);
@@ -416,15 +421,17 @@ $transition-delay:0.5s;
   }
   @at-root
   .s5.active {
-    ul{
-      li{
+    ul {
+      li {
         transform: translateY(0);
         transition: 0.8s;
-        &:nth-child(1){
+        &:nth-child(1) {
           transition-delay: $transition-delay;
-        }&:nth-child(2){
+        }
+        &:nth-child(2) {
           transition-delay: $transition-delay * 1.2;
-        }&:nth-child(3){
+        }
+        &:nth-child(3) {
           transition-delay: $transition-delay * 1.5;
         }
       }
@@ -433,6 +440,155 @@ $transition-delay:0.5s;
   }
 }
 
+@media screen and (max-width: 700px) {
+  /*头部菜单栏*/
+  header #menu {
+    width: 422px;
+    li a {
+      margin: 0 15px;
+      font-size: 16px;
+    }
+  }
+
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 24px;
+  }
+  .section.s4 {
+    .award ul {
+      width: 300px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 555px) {
+
+  /*头部菜单栏*/
+  header #menu {
+    width: 358px;
+    li a {
+      margin: 0 12px;
+      font-size: 14px;
+    }
+  }
+  /*教育背景*/
+  #main .section.s4 h1 {
+    font-size: 20px;
+  }
+  .section.s4 {
+    .award ul {
+      width: 280px;
+    }
+    .education ul{
+      width: 200px;
+    }
+    span {
+      font-size: 13px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .section.s4{
+    .education h1{
+      padding-left: 65px;
+    }
+    div {
+      clear: both;
+    }
+  }
+}
+@media screen and (max-width: 375px){
+  /*头部菜单栏*/
+  header #menu {
+    width: 318px;
+    li a {
+      margin: 0 8px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 345px){
+  /*头部菜单栏*/
+  header #menu {
+    width: 300px;
+    li a {
+      margin: 0 6px;
+      font-size: 14px;
+    }
+  }
+  .section.s1{
+    ul.contact{
+      padding-left: 20px;
+    ;
+    }
+  }
+}
+@media screen and (max-width: 300px){
+  /*头部菜单栏*/
+  header #menu {
+    width: 278px;
+    li a {
+      margin: 0 4px;
+      font-size: 14px;
+    }
+  }
+  .section.s1{
+    ul.contact{
+      padding-left: 2px;
+    ;
+    }
+  }
+}
+
+/*@media screen and (max-width: 414px) {
+  header #menu {
+    width: 75%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 8px;
+      font-size: 13px;
+    }
+
+  }
+}
+@media screen and (max-width: 375px) {
+  header #menu {
+    width: 75%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 5px;
+      font-size: 13px;
+    }
+
+  }
+}
+@media screen and (max-width: 320px) {
+  header #menu {
+    width: 85%;
+    li a {
+      /!*菜单栏*!/
+      margin: 0 5px;
+      font-size: 13px;
+    }
+
+  }
+}
 
 
 
+
+*/
