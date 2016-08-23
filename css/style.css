@@ -68,8 +68,7 @@ header {
         margin: 15px auto; }
         #main .box .tb-cell ul li {
           margin: 10px auto;
-          color: #f7f7f7;
-          /*循环遍历每个背景图标*/ }
+          color: #f7f7f7; }
           #main .box .tb-cell ul li a {
             color: #f7f7f7; }
           #main .box .tb-cell ul li .bg-icon {
@@ -99,7 +98,6 @@ header {
           #main .box .tb-cell ul li .position {
             background: url("../img/position.png") no-repeat center; }
 
-/*公共区每一页下的ul样式*/
 /*第一页*/
 @-webkit-keyframes photo {
   0% {
@@ -527,13 +525,6 @@ header {
   .section.s4 span {
     font-size: 14px; } }
 @media screen and (max-width: 555px) {
-  /*头部菜单栏*/
-  header #menu {
-    width: 358px; }
-    header #menu li a {
-      margin: 0 12px;
-      font-size: 14px; }
-
   /*教育背景*/
   .section.s4 .award ul {
     width: 280px; }
@@ -546,16 +537,19 @@ header {
     font-size: 13px; } }
 @media screen and (max-width: 480px) {
   /*头部导航栏*/
-  header #menu li a {
-    height: 30px;
-    line-height: 30px; }
+  header #menu {
+    width: 318px; }
+    header #menu li a {
+      height: 30px;
+      line-height: 30px;
+      margin: 0 8px;
+      font-size: 14px; }
 
   /*背景图标*/
   #main .box .tb-cell ul {
     margin: 3px auto; }
     #main .box .tb-cell ul li .bg-icon {
       width: 50px;
-      height: 20px;
       background-size: 40%; }
 
   /*首页*/
@@ -564,6 +558,9 @@ header {
     padding-left: 30px; }
   .s1 .my-photo {
     margin: 5px auto; }
+    .s1 .my-photo img {
+      width: 120px;
+      height: 120px; }
   .s1 .home ul {
     font-size: 13px; }
     .s1 .home ul li {
@@ -586,24 +583,15 @@ header {
     font-size: 18px;
     font-weight: bold; }
 
-  .section.s4 {
-    /*  .education,.award ul li{
-        height: 20px;
-        line-height: 20px;
-      }*/ }
-    .section.s4 .award ul {
-      width: 200px; }
-    .section.s4 .education h1 {
-      padding-left: 0; }
-    .section.s4 div {
-      clear: both; } }
-@media screen and (max-width: 375px) {
-  /*头部菜单栏*/
-  header #menu {
-    width: 318px; }
-    header #menu li a {
-      margin: 0 8px;
-      font-size: 14px; } }
+  .section.s4 .box {
+    padding-top: 0px; }
+    .section.s4 .box div {
+      margin: 5px auto;
+      clear: both; }
+  .section.s4 .award ul {
+    width: 200px; }
+  .section.s4 .education h1 {
+    padding-left: 0; } }
 @media screen and (max-width: 345px) {
   /*头部菜单栏*/
   header #menu {
@@ -624,50 +612,6 @@ header {
     width: 278px; }
     header #menu li a {
       margin: 0 4px;
-      font-size: 14px; }
-
-  /*.section.s1 {
-    ul.contact {
-      padding-left: 2px;
-    }
-  }*/ }
-/*@media screen and (max-width: 414px) {
-  header #menu {
-    width: 75%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 8px;
-      font-size: 13px;
-    }
-
-  }
-}
-@media screen and (max-width: 375px) {
-  header #menu {
-    width: 75%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 5px;
-      font-size: 13px;
-    }
-
-  }
-}
-@media screen and (max-width: 320px) {
-  header #menu {
-    width: 85%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 5px;
-      font-size: 13px;
-    }
-
-  }
-}
-
-
-
-
-*/
+      font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */

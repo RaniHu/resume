@@ -88,8 +88,8 @@ $transition-delay: 0.5s;
     display: table;
 
     .tb-cell {
-      display: table-cell; /*span内部的内容就相当于表格*/
-      vertical-align: middle; /*vertical-align属性来对齐其中的内容*/
+      display: table-cell;                /*span内部的内容就相当于表格*/
+      vertical-align: middle;             /*vertical-align属性来对齐其中的内容*/
       text-align: center;
 
       ul {
@@ -109,7 +109,7 @@ $transition-delay: 0.5s;
           span {
             float: left;
           }
-          /*循环遍历每个背景图标*/
+          //循环遍历每个背景图标
           $contact: phone, email, weixin, github, location, degree, university, major, award-list, position;
           @each $contact-style in $contact {
             .#{$contact-style} {
@@ -122,7 +122,7 @@ $transition-delay: 0.5s;
   }
 }
 
-/*公共区每一页下的ul样式*/
+//公共区每一页下的ul样式
 @mixin ul-list-style($ul-width, $li-height, $bg-icon-height,$font-size) {
   ul {
     width: $ul-width;
@@ -477,15 +477,6 @@ $transition-delay: 0.5s;
 
 @media screen and (max-width: 555px) {
 
-  /*头部菜单栏*/
-  header #menu {
-    width: 358px;
-    li a {
-      margin: 0 12px;
-      font-size: 14px;
-    }
-  }
-
   /*教育背景*/
   .section.s4 {
     .award ul {
@@ -506,87 +497,86 @@ $transition-delay: 0.5s;
 }
 
 @media screen and (max-width: 480px) {
+
   /*头部导航栏*/
-  header #menu li a{
-    height: 30px;
-    line-height: 30px;
+  header #menu {
+    width: 318px;
+    li a {
+      height: 30px;
+      line-height: 30px;
+      margin: 0 8px;
+      font-size: 14px;
+    }
   }
   /*背景图标*/
-  #main .box .tb-cell ul{
+  #main .box .tb-cell ul {
     margin: 3px auto;
-  li .bg-icon{
-    width: 50px;
-    height: 20px;
-    background-size: 40%;
-  }
+    li .bg-icon {
+      width: 50px;
+      background-size: 40%;
+    }
   }
   /*首页*/
-  .s1{
-      ul.contact {
-        width: 220px;
-        padding-left: 30px;
-      }
-    .my-photo{
+  .s1 {
+    ul.contact {
+      width: 220px;
+      padding-left: 30px;
+    }
+    .my-photo {
       margin: 5px auto;
+      img {
+        width: 120px;
+        height: 120px;
+      }
     }
-  .home ul{
-    font-size: 13px;
-    li{
-      height: 20px;
-      line-height: 20px;
+    .home ul {
+      font-size: 13px;
+      li {
+        height: 20px;
+        line-height: 20px;
+      }
     }
-  }
 
   }
-  #main .section{
-  h1 {
-    font-size: 26px;
-    margin: 5px auto;
-  }
-  h2{
-    font-size: 18px;
-  }
+  #main .section {
+    h1 {
+      font-size: 26px;
+      margin: 5px auto;
+    }
+    h2 {
+      font-size: 18px;
+    }
   }
   /*教育背景*/
-  #main .section.s4{
-    .box .tb-cell ul{
+  #main .section.s4 {
+    .box .tb-cell ul {
       margin: 3px auto;
-      li{
+      li {
         display: block;
         margin: 3px auto;
       }
     }
 
-  h1 {
-    font-size: 18px;
-    font-weight: bold;
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
   }
-}
   .section.s4 {
- /*  .education,.award ul li{
-     height: 20px;
-     line-height: 20px;
-   }*/
+    .box{
+      padding-top: 30px;
+      div {
+        margin: 5px auto;
+        clear: both;
+      }
+    }
     .award ul {
       width: 200px;
     }
     .education h1 {
       padding-left: 0;
     }
-    div {
-      clear: both;
-    }
-  }
-}
 
-@media screen and (max-width: 375px) {
-  /*头部菜单栏*/
-  header #menu {
-    width: 318px;
-    li a {
-      margin: 0 8px;
-      font-size: 14px;
-    }
   }
 }
 
@@ -597,7 +587,7 @@ $transition-delay: 0.5s;
     li a {
       margin: 0 6px;
       font-size: 14px;
-  }
+    }
   }
   #main .section h1 {
     font-size: 24px;
@@ -621,48 +611,4 @@ $transition-delay: 0.5s;
       font-size: 14px;
     }
   }
-  /*.section.s1 {
-    ul.contact {
-      padding-left: 2px;
-    }
-  }*/
 }
-
-/*@media screen and (max-width: 414px) {
-  header #menu {
-    width: 75%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 8px;
-      font-size: 13px;
-    }
-
-  }
-}
-@media screen and (max-width: 375px) {
-  header #menu {
-    width: 75%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 5px;
-      font-size: 13px;
-    }
-
-  }
-}
-@media screen and (max-width: 320px) {
-  header #menu {
-    width: 85%;
-    li a {
-      /!*菜单栏*!/
-      margin: 0 5px;
-      font-size: 13px;
-    }
-
-  }
-}
-
-
-
-
-*/
