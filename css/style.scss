@@ -508,41 +508,42 @@ $transition-delay: 0.5s;
       padding: 0 18px;
       li:nth-child(2) {
         a {
-            font-size: 22px;
+          font-size: 22px;
         }
       }
     }
   }
 }
+
 @media screen and (max-width: 908px) {
   /*项目经验*/
   .section.s3 {
-    .box{
+    .box {
       padding-top: 40px;
     }
     ul.experience-info {
       width: 38%;
       padding: 0 6%;
       margin: 0;
-      &:nth-child(3){
+      &:nth-child(3) {
         clear: both;
       }
-      li{
+      li {
         margin: 5px auto;
       }
-      li:first-child{
-        i.experience-icon{
+      li:first-child {
+        i.experience-icon {
           height: 100px;
           background-size: 100px;
         }
       }
       li:nth-child(2) {
         a {
-            font-size: 20px;
+          font-size: 20px;
         }
       }
       li:nth-child(3) {
-       font-size: 15px;
+        font-size: 15px;
       }
     }
   }
@@ -583,23 +584,23 @@ $transition-delay: 0.5s;
 @media screen and (max-width: 555px) {
   .section.s3 {
 
-    .experience-box{
+    .experience-box {
       width: 80%;
     }
-    .box{
+    .box {
       padding-top: 20px;
     }
     ul.experience-info {
       display: block;
       width: 100%;
       padding: 3% 0;
-      li{
-       margin: 1% auto;
+      li {
+        margin: 1% auto;
       }
-      li:first-child{
+      li:first-child {
         width: 50px;
         float: left;
-        i.experience-icon{
+        i.experience-icon {
           height: 50px;
           background-size: 50px;
         }
@@ -615,12 +616,11 @@ $transition-delay: 0.5s;
       li:nth-child(3) {
         clear: both;
         font-size: 14px;
-        padding-left:5px;
+        padding-left: 5px;
         padding-top: 5px;
       }
     }
   }
-
 
   /*教育背景*/
   .section.s4 {
@@ -689,9 +689,9 @@ $transition-delay: 0.5s;
 
 //iphone6
 @media screen and (max-width: 374px) {
-   /*背景图标*/
+  /*背景图标*/
   #main .box .tb-cell ul {
-    margin: 3px auto;
+    margin: 2px auto;
     li .bg-icon {
       width: 50px;
       background-size: 40%;
@@ -729,14 +729,17 @@ $transition-delay: 0.5s;
     }
   }
   .section.s3 {
-
     .experience-box {
       width: 80%;
+    }
+    .box .tb-cell ul {
+      margin: 0;
     }
     ul.experience-info {
       display: block;
       width: 100%;
       padding: 3% 0;
+      margin: 0;
       li {
         margin: 1% auto;
       }
@@ -760,13 +763,15 @@ $transition-delay: 0.5s;
         clear: both;
         font-size: 13px;
         padding-left: 5px;
-        //padding-top: 5px;
       }
     }
   }
 }
 
 @media screen and (max-width: 345px) {
+  #main .box .tb-cell ul {
+    margin: 0;
+  }
   /*头部菜单栏*/
   header #menu {
     width: 300px;
@@ -778,11 +783,23 @@ $transition-delay: 0.5s;
   #main .section h1 {
     font-size: 24px;
   }
+
+  /*首页*/
   .section.s1 {
     .my-photo {
       img {
         width: 100px;
         height: 100px;
+      }
+    }
+  }
+
+  /*项目经验*/
+  .section.s3 ul.experience-info{
+    li{
+      font-size: 12px;
+      &:nth-child(3){
+        padding-top: 0;
       }
     }
   }
@@ -797,7 +814,7 @@ $transition-delay: 0.5s;
       font-size: 14px;
     }
   }
-  body{
+  body {
     min-width: 320px;
     overflow: scroll;
   }

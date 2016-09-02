@@ -689,7 +689,7 @@ header {
 @media screen and (max-width: 374px) {
   /*背景图标*/
   #main .box .tb-cell ul {
-    margin: 3px auto; }
+    margin: 2px auto; }
     #main .box .tb-cell ul li .bg-icon {
       width: 50px;
       background-size: 40%; }
@@ -717,10 +717,13 @@ header {
 
   .section.s3 .experience-box {
     width: 80%; }
+  .section.s3 .box .tb-cell ul {
+    margin: 0; }
   .section.s3 ul.experience-info {
     display: block;
     width: 100%;
-    padding: 3% 0; }
+    padding: 3% 0;
+    margin: 0; }
     .section.s3 ul.experience-info li {
       margin: 1% auto; }
     .section.s3 ul.experience-info li:first-child {
@@ -740,6 +743,9 @@ header {
       font-size: 13px;
       padding-left: 5px; } }
 @media screen and (max-width: 345px) {
+  #main .box .tb-cell ul {
+    margin: 0; }
+
   /*头部菜单栏*/
   header #menu {
     width: 300px; }
@@ -750,9 +756,16 @@ header {
   #main .section h1 {
     font-size: 24px; }
 
+  /*首页*/
   .section.s1 .my-photo img {
     width: 100px;
-    height: 100px; } }
+    height: 100px; }
+
+  /*项目经验*/
+  .section.s3 ul.experience-info li {
+    font-size: 12px; }
+    .section.s3 ul.experience-info li:nth-child(3) {
+      padding-top: 0; } }
 @media screen and (max-width: 300px) {
   /*头部菜单栏*/
   header #menu {
