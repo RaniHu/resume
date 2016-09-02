@@ -42,8 +42,7 @@ header {
 
 /*中间主要内容*/
 #main {
-  /*公共区*/
-  /*公共区每一页内容的盒子*/ }
+  /*公共区*/ }
   #main .section {
     overflow: hidden; }
     #main .section h1 {
@@ -53,50 +52,60 @@ header {
     #main .section h2 {
       font-size: 20px;
       color: #105752; }
-  #main .box {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: table; }
-    #main .box .tb-cell {
-      display: table-cell;
-      /*span内部的内容就相当于表格*/
-      vertical-align: middle;
-      /*vertical-align属性来对齐其中的内容*/
-      text-align: center; }
-      #main .box .tb-cell ul {
-        margin: 15px auto; }
-        #main .box .tb-cell ul li {
-          margin: 10px auto;
+
+/*公共区每一页内容的盒子*/
+.box {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: table; }
+  .box .tb-cell {
+    display: table-cell;
+    /*span内部的内容就相当于表格*/
+    vertical-align: middle;
+    /*vertical-align属性来对齐其中的内容*/
+    text-align: center; }
+    .box .tb-cell .bg-icon {
+      float: left;
+      display: inline-block;
+      width: 80px; }
+    .box .tb-cell ul {
+      margin: 15px auto; }
+      .box .tb-cell ul li {
+        margin: 10px auto;
+        color: #f7f7f7; }
+        .box .tb-cell ul li a {
           color: #f7f7f7; }
-          #main .box .tb-cell ul li a {
-            color: #f7f7f7; }
-          #main .box .tb-cell ul li .bg-icon {
-            float: left;
-            display: inline-block;
-            width: 80px; }
-          #main .box .tb-cell ul li span {
-            float: left; }
-          #main .box .tb-cell ul li .phone {
-            background: url("../img/phone.png") no-repeat center; }
-          #main .box .tb-cell ul li .email {
-            background: url("../img/email.png") no-repeat center; }
-          #main .box .tb-cell ul li .weixin {
-            background: url("../img/weixin.png") no-repeat center; }
-          #main .box .tb-cell ul li .github {
-            background: url("../img/github.png") no-repeat center; }
-          #main .box .tb-cell ul li .location {
-            background: url("../img/location.png") no-repeat center; }
-          #main .box .tb-cell ul li .degree {
-            background: url("../img/degree.png") no-repeat center; }
-          #main .box .tb-cell ul li .university {
-            background: url("../img/university.png") no-repeat center; }
-          #main .box .tb-cell ul li .major {
-            background: url("../img/major.png") no-repeat center; }
-          #main .box .tb-cell ul li .award-list {
-            background: url("../img/award-list.png") no-repeat center; }
-          #main .box .tb-cell ul li .position {
-            background: url("../img/position.png") no-repeat center; }
+        .box .tb-cell ul li span {
+          float: left; }
+        .box .tb-cell ul li .phone {
+          background: url("../img/phone.png") no-repeat center; }
+        .box .tb-cell ul li .email {
+          background: url("../img/email.png") no-repeat center; }
+        .box .tb-cell ul li .weixin {
+          background: url("../img/weixin.png") no-repeat center; }
+        .box .tb-cell ul li .github {
+          background: url("../img/github.png") no-repeat center; }
+        .box .tb-cell ul li .location {
+          background: url("../img/location.png") no-repeat center; }
+        .box .tb-cell ul li .degree {
+          background: url("../img/degree.png") no-repeat center; }
+        .box .tb-cell ul li .university {
+          background: url("../img/university.png") no-repeat center; }
+        .box .tb-cell ul li .major {
+          background: url("../img/major.png") no-repeat center; }
+        .box .tb-cell ul li .award-list {
+          background: url("../img/award-list.png") no-repeat center; }
+        .box .tb-cell ul li .position {
+          background: url("../img/position.png") no-repeat center; }
+        .box .tb-cell ul li .resume-icon {
+          background: url("../img/resume-icon.png") no-repeat center; }
+        .box .tb-cell ul li .game {
+          background: url("../img/game.png") no-repeat center; }
+        .box .tb-cell ul li .myslider {
+          background: url("../img/myslider.png") no-repeat center; }
+        .box .tb-cell ul li .hospital {
+          background: url("../img/hospital.png") no-repeat center; }
 
 /*第一页*/
 @-webkit-keyframes photo {
@@ -419,21 +428,81 @@ header {
   animation: move3 1s 0.5s forwards; }
 
 /*第三页*/
-.s3 ul {
-  width: 1000px;
-  margin: 0 auto; }
-  .s3 ul li {
-    float: left;
-    margin: 0 10px; }
-    .s3 ul li:nth-child(1) {
-      transform: translateX(0); }
-    .s3 ul li:nth-child(2) {
-      transform: translateX(-320px); }
-    .s3 ul li:nth-child(3) {
-      transform: translateX(-660px); }
-.s3.active ul li {
-  transform: translateX(0);
-  transition: 0.8s 0.5s; }
+.s3 .experience-box {
+  width: 80%;
+  text-align: center; }
+.s3 ul.experience-info {
+  width: 20%;
+  float: left;
+  padding: 0 25px;
+  transform: translateY(1000px);
+    /* &:nth-child(1) {
+       transform: translateX(0);
+     }
+     &:nth-child(2) {
+       transform: translateX(-320px);
+
+     }
+     &:nth-child(3) {
+       transform: translateX(-660px);
+
+     }
+     &:nth-child(4) {
+       transform: translateX(-980px);
+
+     }*/ }
+  .s3 ul.experience-info li {
+    display: list-item;
+    text-align: center; }
+    .s3 ul.experience-info li i.experience-icon {
+      display: block;
+      width: 100%;
+      height: 120px; }
+    .s3 ul.experience-info li:first-child {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.6s;
+      -moz-transition: 0.6s;
+      -ms-transiton: 0.6s;
+      -o-transition: 0.6s;
+      transition: 0.6s; }
+      .s3 ul.experience-info li:first-child:hover {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg); }
+    .s3 ul.experience-info li:nth-child(2) a {
+      font-size: 26px;
+      font-weight: bold;
+      color: #007967;
+      -webkit-transition: 0.8s;
+      -moz-transition: 0.8s;
+      -ms-transiton: 0.8s;
+      -o-transition: 0.8s;
+      transition: 0.8s; }
+      .s3 ul.experience-info li:nth-child(2) a:hover {
+        color: #00463c; }
+    .s3 ul.experience-info li:nth-child(3) {
+      text-align: left;
+      padding-top: 10px;
+      color: #EEEEEE; }
+.s3.active ul {
+  /*transform: translateX(0);
+  transition: 0.8s 0.5s;*/
+  transform: translateY(0);
+  transition: 0.8s; }
+  .s3.active ul:nth-child(1) {
+    transition-delay: 0.5s; }
+  .s3.active ul:nth-child(2) {
+    transition-delay: 0.6s; }
+  .s3.active ul:nth-child(3) {
+    transition-delay: 0.7s; }
+  .s3.active ul:nth-child(4) {
+    transition-delay: 0.8s; }
 
 /*第四页*/
 .s4 .education {
@@ -504,6 +573,31 @@ header {
   .s5.active ul li:nth-child(3) {
     transition-delay: 0.75s; }
 
+@media screen and (max-width: 1255px) {
+  /*项目经验*/
+  .section.s3 ul.experience-info {
+    padding: 0 18px; }
+    .section.s3 ul.experience-info li:nth-child(2) a {
+      font-size: 22px; } }
+@media screen and (max-width: 908px) {
+  /*项目经验*/
+  .section.s3 .box {
+    padding-top: 40px; }
+  .section.s3 ul.experience-info {
+    width: 38%;
+    padding: 0 6%;
+    margin: 0; }
+    .section.s3 ul.experience-info:nth-child(3) {
+      clear: both; }
+    .section.s3 ul.experience-info li {
+      margin: 5px auto; }
+    .section.s3 ul.experience-info li:first-child i.experience-icon {
+      height: 100px;
+      background-size: 100px; }
+    .section.s3 ul.experience-info li:nth-child(2) a {
+      font-size: 20px; }
+    .section.s3 ul.experience-info li:nth-child(3) {
+      font-size: 15px; } }
 @media screen and (max-width: 700px) {
   /*头部菜单栏*/
   header #menu {
@@ -525,6 +619,34 @@ header {
   .section.s4 span {
     font-size: 14px; } }
 @media screen and (max-width: 555px) {
+  .section.s3 .experience-box {
+    width: 80%; }
+  .section.s3 .box {
+    padding-top: 20px; }
+  .section.s3 ul.experience-info {
+    display: block;
+    width: 100%;
+    padding: 3% 0; }
+    .section.s3 ul.experience-info li {
+      margin: 1% auto; }
+    .section.s3 ul.experience-info li:first-child {
+      width: 50px;
+      float: left; }
+      .section.s3 ul.experience-info li:first-child i.experience-icon {
+        height: 50px;
+        background-size: 50px; }
+    .section.s3 ul.experience-info li:nth-child(2) {
+      float: left;
+      line-height: 50px;
+      padding-left: 20px; }
+      .section.s3 ul.experience-info li:nth-child(2) a {
+        font-size: 18px; }
+    .section.s3 ul.experience-info li:nth-child(3) {
+      clear: both;
+      font-size: 14px;
+      padding-left: 5px;
+      padding-top: 5px; }
+
   /*教育背景*/
   .section.s4 .award ul {
     width: 280px; }
@@ -545,6 +667,26 @@ header {
       margin: 0 8px;
       font-size: 14px; }
 
+  /*教育背景*/
+  #main .section.s4 .box .tb-cell ul {
+    margin: 3px auto; }
+    #main .section.s4 .box .tb-cell ul li {
+      display: block;
+      margin: 3px auto; }
+  #main .section.s4 h1 {
+    font-size: 18px;
+    font-weight: bold; }
+
+  .section.s4 .box {
+    padding-top: 30px; }
+    .section.s4 .box div {
+      margin: 5px auto;
+      clear: both; }
+  .section.s4 .award ul {
+    width: 200px; }
+  .section.s4 .education h1 {
+    padding-left: 0; } }
+@media screen and (max-width: 374px) {
   /*背景图标*/
   #main .box .tb-cell ul {
     margin: 3px auto; }
@@ -573,25 +715,30 @@ header {
   #main .section h2 {
     font-size: 18px; }
 
-  /*教育背景*/
-  #main .section.s4 .box .tb-cell ul {
-    margin: 3px auto; }
-    #main .section.s4 .box .tb-cell ul li {
-      display: block;
-      margin: 3px auto; }
-  #main .section.s4 h1 {
-    font-size: 18px;
-    font-weight: bold; }
-
-  .section.s4 .box {
-    padding-top: 0px; }
-    .section.s4 .box div {
-      margin: 5px auto;
-      clear: both; }
-  .section.s4 .award ul {
-    width: 200px; }
-  .section.s4 .education h1 {
-    padding-left: 0; } }
+  .section.s3 .experience-box {
+    width: 80%; }
+  .section.s3 ul.experience-info {
+    display: block;
+    width: 100%;
+    padding: 3% 0; }
+    .section.s3 ul.experience-info li {
+      margin: 1% auto; }
+    .section.s3 ul.experience-info li:first-child {
+      width: 40px;
+      float: left; }
+      .section.s3 ul.experience-info li:first-child i.experience-icon {
+        height: 40px;
+        background-size: 40px; }
+    .section.s3 ul.experience-info li:nth-child(2) {
+      float: left;
+      line-height: 40px;
+      padding-left: 20px; }
+      .section.s3 ul.experience-info li:nth-child(2) a {
+        font-size: 16px; }
+    .section.s3 ul.experience-info li:nth-child(3) {
+      clear: both;
+      font-size: 13px;
+      padding-left: 5px; } }
 @media screen and (max-width: 345px) {
   /*头部菜单栏*/
   header #menu {
@@ -612,6 +759,10 @@ header {
     width: 278px; }
     header #menu li a {
       margin: 0 4px;
-      font-size: 14px; } }
+      font-size: 14px; }
+
+  body {
+    min-width: 320px;
+    overflow: scroll; } }
 
 /*# sourceMappingURL=style.css.map */

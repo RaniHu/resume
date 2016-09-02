@@ -22,6 +22,7 @@
 
 
 <div id="main">
+    <!-- 首页-->
     <section class="section s1 active">
         <div class="box">
             <div class="home tb-cell">
@@ -43,6 +44,7 @@
             </div>
         </div>
     </section>
+    <!-- 专业技能-->
     <section class="section s2">
         <ul class="food">
             <li><img src="img/s3/food1.jpg"></li>
@@ -50,14 +52,35 @@
             <li><img src="img/s3/food2.jpg"></li>
         </ul>
     </section>
+    <!-- 项目经验-->
     <section class="section s3">
-        <ul class="food">
-            <li><img src="img/s3/food1.jpg"></li>
-            <li><img src="img/s3/food3.jpg"></li>
-            <li><img src="img/s3/food2.jpg"></li>
-        </ul>
+         <div class="box experience-box">
+            <div class="experience tb-cell">
+                <ul class="experience-info">
+                    <li><a href="https://github.com/RaniHu/resume"><i class="experience-icon resume-icon "> </i></a></li>
+                    <li class="experience-title"><a href="https://github.com/RaniHu/resume">响应式简历</a></li>
+                    <li>利用fullpage.js插件实现鼠标滚动过渡效果。合理运用了css3的动画过渡、变形等属性实现一些动画效果。运用css3媒体查询实现了在线简历的响应式设计。</li>
+                </ul>
+                <ul class="experience-info">
+                    <li><a href="https://ranihu.github.io/2048/"><i class="experience-icon game"> </i></a></li>
+                    <li class="experience-title"><a href="https://ranihu.github.io/2048/">2048小游戏</a></li>
+                    <li>基本还原原版2048小游戏,适配了pc端和移动端。</li>
+                </ul>
+                <ul class="experience-info">
+                    <li><a href="https://ranihu.github.io/myslider/"><i class="experience-icon myslider"> </i></a></li>
+                    <li class="experience-title"><a href="https://ranihu.github.io/myslider/">MySlider插件</a></li>
+                    <li>这是一个基于jQuery的轻量级轮播图插件。支持淡入淡出、左右滑动、自动轮播等动画方式，可选择是否需要适配手机端。</li>
+                </ul>
+                <ul class="experience-info">
+                    <li><a href="#"><i class="experience-icon hospital"> </i></a></li>
+                    <li class="experience-title"><a href="#">社区诊疗系统</a></li>
+                    <li>在实习期间参与了社区诊疗系统医生端的开发。</li>
+                </ul>
+            </div>
+         </div>
 
     </section>
+    <!-- 个人信息-->
     <section class="section s4">
         <div class="box">
             <div class="education tb-cell">
@@ -94,7 +117,7 @@
             verticalCentered: true,                                       //内容垂直居中
             css3: true,
             resize:true,
-            sectionsColor: ['#23BBB1', '#666699', '#007b52', '#009966', '#336699'],   //设置每一页背景颜色
+            sectionsColor: ['#23BBB1', '#666699', '#22c3aa', '#009966', '#336699'],   //设置每一页背景颜色
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],                   //定义锚链接
             scrollingSpeed: 500,                                              //滚动速度
             menu: "#menu",
