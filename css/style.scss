@@ -367,7 +367,7 @@ $transition-delay: 0.5s;
   }
 }
 
-/*第四页*/
+/*第五页*/
 .s5 {
   .education {
     float: left;
@@ -402,7 +402,7 @@ $transition-delay: 0.5s;
 ;
 }
 
-/*第五页*/
+/*第四页*/
 .s4.section {
   .internships{
     width:50%;
@@ -423,12 +423,13 @@ $transition-delay: 0.5s;
       color: #e5eef6;
       font-size: 20px;
       font-weight: normal;
+      padding-bottom: 15px;
     }
     p{
       text-align: left;
       font-size: 18px;
       color: #cde;
-      margin-top: 25px;
+      margin:5px auto;;
     }
   }
 }
@@ -862,6 +863,26 @@ $transition-delay: 0.5s;
       }
       &:nth-child(3) {
         padding-top: 0;
+      }
+    }
+  }
+
+  /*工作经历*/
+  /*实习经历*/
+  .s4.section {
+    .internships{
+      width:72%;
+      h3{
+        font-size: 22px;
+      }
+      h4{
+        font-size: 16px;
+      }
+      h5{
+        font-size: 15px;
+      }
+      p{
+        font-size: 13px;
       }
     }
   }

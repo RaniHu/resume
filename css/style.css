@@ -361,7 +361,7 @@ header {
   .s3.active ul:nth-child(4) {
     transition-delay: 0.8s; }
 
-/*第四页*/
+/*第五页*/
 .s5 .education {
   float: left;
   -webkit-transform: translateX(-1000px);
@@ -412,7 +412,7 @@ header {
   .s5.active .box div:nth-child(2) {
     transition-delay: 0.75s; }
 
-/*第五页*/
+/*第四页*/
 .s4.section .internships {
   width: 50%;
   margin: 0 auto;
@@ -429,12 +429,13 @@ header {
   .s4.section .internships h5 {
     color: #e5eef6;
     font-size: 20px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-bottom: 15px; }
   .s4.section .internships p {
     text-align: left;
     font-size: 18px;
     color: #cde;
-    margin-top: 25px; }
+    margin: 5px auto; }
 
 @media screen and (max-width: 1255px) {
   /*项目经验*/
@@ -706,7 +707,20 @@ header {
     .section.s3 ul.experience-info li:nth-child(2) a {
       font-size: 14px; }
     .section.s3 ul.experience-info li:nth-child(3) {
-      padding-top: 0; } }
+      padding-top: 0; }
+
+  /*工作经历*/
+  /*实习经历*/
+  .s4.section .internships {
+    width: 72%; }
+    .s4.section .internships h3 {
+      font-size: 22px; }
+    .s4.section .internships h4 {
+      font-size: 16px; }
+    .s4.section .internships h5 {
+      font-size: 15px; }
+    .s4.section .internships p {
+      font-size: 13px; } }
 @media screen and (max-width: 300px) {
   #main .section {
     overflow: scroll;
