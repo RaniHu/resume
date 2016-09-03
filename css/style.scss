@@ -252,7 +252,7 @@ $transition-delay: 0.5s;
       width: 100%;
       height: 18px;
       line-height: 18px;
-      margin: 20px auto;
+      margin: 18px auto;
       label.skill-name {
         float: left;
         font-size: 16px;
@@ -385,6 +385,20 @@ $transition-delay: 0.5s;
       width: 300px;
     }
   }
+  .download-resume{
+    text-align: center;
+    padding-top: 60px;
+    @include transform(translateY(1000px)); //文字由右向中间滑动
+    a{
+     color: #00442d;
+     font-size: 26px;
+     font-weight: bold;
+     transition: 1s;
+      &:hover{
+        color: #ffffff;
+      }
+    }
+  }
 
   @at-root
   .s5.active {
@@ -397,6 +411,12 @@ $transition-delay: 0.5s;
       &:nth-child(2) {
         transition-delay: $transition-delay*1.5;
       }
+
+    }
+    .download-resume{
+      @include transform(translateY(0));
+      @include transition(1s);
+      transition-delay: $transition-delay*1.5;
     }
   }
 ;
@@ -654,7 +674,12 @@ $transition-delay: 0.5s;
 
   /*教育背景*/
   #main .section.s5 {
-    .box .tb-cell ul {
+    .box .tb-cell
+    .bg-icon{
+      width: 60px;
+      background-size: 25px;
+    }
+    ul {
       margin: 3px auto;
       li {
         display: block;
@@ -667,6 +692,7 @@ $transition-delay: 0.5s;
       font-weight: bold;
     }
   }
+  /*个人信息*/
   .section.s5 {
     .box {
       padding-top: 30px;
@@ -681,7 +707,12 @@ $transition-delay: 0.5s;
     .education h1 {
       padding-left: 0;
     }
-
+    .download-resume{
+      padding-top: 40px;
+      a{
+        font-size: 20px;
+      }
+    }
   }
 }
 //iphone6 plus
@@ -712,7 +743,7 @@ $transition-delay: 0.5s;
 
   /*头部*/
   header{
-    top:12px;
+    top:10px;
   }
   /*背景图标*/
   #main .box .tb-cell ul {
@@ -778,9 +809,6 @@ $transition-delay: 0.5s;
     .box {
       padding-top: 50px;
     }
-    .box .tb-cell ul {
-      margin: 0;
-    }
     ul.experience-info {
       display: block;
       width: 100%;
@@ -816,7 +844,7 @@ $transition-delay: 0.5s;
 
 @media screen and (max-width: 345px) {
   #main .box .tb-cell ul {
-    margin: 0;
+    margin: 2px auto;
   }
   /*头部菜单栏*/
   header #menu {
@@ -846,7 +874,7 @@ $transition-delay: 0.5s;
       li {
         height: 13px;
         line-height: 13px;
-        margin: 12px auto;
+        margin: 10px auto;
       }
     }
   }
@@ -868,21 +896,29 @@ $transition-delay: 0.5s;
   }
 
   /*工作经历*/
-  /*实习经历*/
   .s4.section {
     .internships{
       width:72%;
       h3{
-        font-size: 22px;
+        font-size: 20px;
       }
       h4{
-        font-size: 16px;
-      }
-      h5{
         font-size: 15px;
       }
+      h5{
+        font-size: 14px;
+      }
       p{
-        font-size: 13px;
+        font-size: 12px;
+      }
+    }
+  }
+  /*个人信息*/
+  .section.s5{
+    .download-resume{
+      padding-top: 10px;
+      a{
+        font-size: 18px;
       }
     }
   }
@@ -907,7 +943,7 @@ $transition-delay: 0.5s;
     margin: 2px auto;
     li .bg-icon {
       width: 40px;
-      height: 18px;
+      height: 20px;
     }
   }
   .s1 {
@@ -962,6 +998,31 @@ $transition-delay: 0.5s;
       padding-top: 0;
     }
   }
+  /*个人信息*/
+  #main .section.s5 {
+    .box .tb-cell
+    .bg-icon{
+      width: 60px;
+      background-size: 20px;
+    }}
+  .section.s5{
+    .download-resume{
+      padding-top: 5px;
+      a{
+        font-size: 16px;
+      }
+    }
+
+  }
+  .s5 .education ul li , .s5 .award ul li{
+    height: 25px;
+    line-height: 25px;
+  }
+
+  #main .section.s5 h1{
+    font-size: 16px;
+  }
+
 }
 
 
