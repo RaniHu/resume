@@ -722,25 +722,25 @@ header {
   .section.s3 ul.experience-info {
     display: block;
     width: 100%;
-    padding: 3% 0;
+    padding: 0;
     margin: 0; }
     .section.s3 ul.experience-info li {
       margin: 1% auto; }
     .section.s3 ul.experience-info li:first-child {
-      width: 40px;
+      width: 35px;
       float: left; }
       .section.s3 ul.experience-info li:first-child i.experience-icon {
-        height: 40px;
-        background-size: 40px; }
+        height: 35px;
+        background-size: 35px; }
     .section.s3 ul.experience-info li:nth-child(2) {
       float: left;
-      line-height: 40px;
+      line-height: 35px;
       padding-left: 20px; }
       .section.s3 ul.experience-info li:nth-child(2) a {
         font-size: 16px; }
     .section.s3 ul.experience-info li:nth-child(3) {
       clear: both;
-      font-size: 13px;
+      font-size: 12px;
       padding-left: 5px; } }
 @media screen and (max-width: 345px) {
   #main .box .tb-cell ul {
@@ -764,6 +764,8 @@ header {
   /*项目经验*/
   .section.s3 ul.experience-info li {
     font-size: 12px; }
+    .section.s3 ul.experience-info li:nth-child(2) a {
+      font-size: 14px; }
     .section.s3 ul.experience-info li:nth-child(3) {
       padding-top: 0; } }
 @media screen and (max-width: 300px) {
