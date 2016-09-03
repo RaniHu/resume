@@ -104,8 +104,8 @@ header {
           background: url("../img/game.png") no-repeat center; }
         .box .tb-cell ul li .myslider {
           background: url("../img/myslider.png") no-repeat center; }
-        .box .tb-cell ul li .hospital {
-          background: url("../img/hospital.png") no-repeat center; }
+        .box .tb-cell ul li .house {
+          background: url("../img/house.png") no-repeat center; }
 
 /*第一页*/
 @-webkit-keyframes photo {
@@ -198,234 +198,106 @@ header {
 
 /*第二页弹性动画*/
 /*定义时间帧*/
-@-webkit-keyframes move1 {
+@-webkit-keyframes move {
   0% {
-    -webkit-transform: translate(320px, -1000px);
-    -moz-transform: translate(320px, -1000px);
-    -ms-transform: translate(320px, -1000px);
-    -o-transform: translate(320px, -1000px);
-    transform: translate(320px, -1000px); }
-  20% {
-    -webkit-transform: translate(320px, 0px);
-    -moz-transform: translate(320px, 0px);
-    -ms-transform: translate(320px, 0px);
-    -o-transform: translate(320px, 0px);
-    transform: translate(320px, 0px); }
+    -webkit-transform: translateY(-1000px);
+    -moz-transform: translateY(-1000px);
+    -ms-transform: translateY(-1000px);
+    -o-transform: translateY(-1000px);
+    transform: translateY(-1000px); }
   40% {
-    -webkit-transform: translate(320px, -50px);
-    -moz-transform: translate(320px, -50px);
-    -ms-transform: translate(320px, -50px);
-    -o-transform: translate(320px, -50px);
-    transform: translate(320px, -50px); }
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    -o-transform: translateY(60px);
+    transform: translateY(60px); }
   60% {
-    -webkit-transform: translate(320px, 0px);
-    -moz-transform: translate(320px, 0px);
-    -ms-transform: translate(320px, 0px);
-    -o-transform: translate(320px, 0px);
-    transform: translate(320px, 0px); }
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px); }
   100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-@keyframes move1 {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px); }
+  /* 100% {
+     @include transform(translateY( 0px))
+   }*/ }
+@keyframes move {
   0% {
-    -webkit-transform: translate(320px, -1000px);
-    -moz-transform: translate(320px, -1000px);
-    -ms-transform: translate(320px, -1000px);
-    -o-transform: translate(320px, -1000px);
-    transform: translate(320px, -1000px); }
-  20% {
-    -webkit-transform: translate(320px, 0px);
-    -moz-transform: translate(320px, 0px);
-    -ms-transform: translate(320px, 0px);
-    -o-transform: translate(320px, 0px);
-    transform: translate(320px, 0px); }
+    -webkit-transform: translateY(-1000px);
+    -moz-transform: translateY(-1000px);
+    -ms-transform: translateY(-1000px);
+    -o-transform: translateY(-1000px);
+    transform: translateY(-1000px); }
   40% {
-    -webkit-transform: translate(320px, -50px);
-    -moz-transform: translate(320px, -50px);
-    -ms-transform: translate(320px, -50px);
-    -o-transform: translate(320px, -50px);
-    transform: translate(320px, -50px); }
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    -o-transform: translateY(60px);
+    transform: translateY(60px); }
   60% {
-    -webkit-transform: translate(320px, 0px);
-    -moz-transform: translate(320px, 0px);
-    -ms-transform: translate(320px, 0px);
-    -o-transform: translate(320px, 0px);
-    transform: translate(320px, 0px); }
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px); }
   100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-@-webkit-keyframes move2 {
-  0% {
-    -webkit-transform: translate(0px, -1000px);
-    -moz-transform: translate(0px, -1000px);
-    -ms-transform: translate(0px, -1000px);
-    -o-transform: translate(0px, -1000px);
-    transform: translate(0px, -1000px); }
-  20% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); }
-  40% {
-    -webkit-transform: translate(0px, -50px);
-    -moz-transform: translate(0px, -50px);
-    -ms-transform: translate(0px, -50px);
-    -o-transform: translate(0px, -50px);
-    transform: translate(0px, -50px); }
-  60% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-@keyframes move2 {
-  0% {
-    -webkit-transform: translate(0px, -1000px);
-    -moz-transform: translate(0px, -1000px);
-    -ms-transform: translate(0px, -1000px);
-    -o-transform: translate(0px, -1000px);
-    transform: translate(0px, -1000px); }
-  20% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); }
-  40% {
-    -webkit-transform: translate(0px, -50px);
-    -moz-transform: translate(0px, -50px);
-    -ms-transform: translate(0px, -50px);
-    -o-transform: translate(0px, -50px);
-    transform: translate(0px, -50px); }
-  60% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-@-webkit-keyframes move3 {
-  0% {
-    -webkit-transform: translate(-320px, -1000px);
-    -moz-transform: translate(-320px, -1000px);
-    -ms-transform: translate(-320px, -1000px);
-    -o-transform: translate(-320px, -1000px);
-    transform: translate(-320px, -1000px); }
-  20% {
-    -webkit-transform: translate(-320px, 0px);
-    -moz-transform: translate(-320px, 0px);
-    -ms-transform: translate(-320px, 0px);
-    -o-transform: translate(-320px, 0px);
-    transform: translate(-320px, 0px); }
-  40% {
-    -webkit-transform: translate(-320px, -50px);
-    -moz-transform: translate(-320px, -50px);
-    -ms-transform: translate(-320px, -50px);
-    -o-transform: translate(-320px, -50px);
-    transform: translate(-320px, -50px); }
-  60% {
-    -webkit-transform: translate(-320px, 0px);
-    -moz-transform: translate(-320px, 0px);
-    -ms-transform: translate(-320px, 0px);
-    -o-transform: translate(-320px, 0px);
-    transform: translate(-320px, 0px); }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-@keyframes move3 {
-  0% {
-    -webkit-transform: translate(-320px, -1000px);
-    -moz-transform: translate(-320px, -1000px);
-    -ms-transform: translate(-320px, -1000px);
-    -o-transform: translate(-320px, -1000px);
-    transform: translate(-320px, -1000px); }
-  20% {
-    -webkit-transform: translate(-320px, 0px);
-    -moz-transform: translate(-320px, 0px);
-    -ms-transform: translate(-320px, 0px);
-    -o-transform: translate(-320px, 0px);
-    transform: translate(-320px, 0px); }
-  40% {
-    -webkit-transform: translate(-320px, -50px);
-    -moz-transform: translate(-320px, -50px);
-    -ms-transform: translate(-320px, -50px);
-    -o-transform: translate(-320px, -50px);
-    transform: translate(-320px, -50px); }
-  60% {
-    -webkit-transform: translate(-320px, 0px);
-    -moz-transform: translate(-320px, 0px);
-    -ms-transform: translate(-320px, 0px);
-    -o-transform: translate(-320px, 0px);
-    transform: translate(-320px, 0px); }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    -o-transform: translate(0px, 0px);
-    transform: translate(0px, 0px); } }
-.s2 ul {
-  width: 1000px;
-  margin: 0 auto; }
-  .s2 ul li {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px); }
+  /*100% {
+    @include transform(translateY( 0px))
+  }*/ }
+.s2 ul#skill-tip {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform: translateY(-1000px);
+  -moz-transform: translateY(-1000px);
+  -ms-transform: translateY(-1000px);
+  -o-transform: translateY(-1000px);
+  transform: translateY(-1000px); }
+  .s2 ul#skill-tip li {
+    display: block;
     float: left;
-    margin: 0 10px; }
-    .s2 ul li:nth-child(1) {
-      -webkit-transform: translate(320px, -1000px);
-      -moz-transform: translate(320px, -1000px);
-      -ms-transform: translate(320px, -1000px);
-      -o-transform: translate(320px, -1000px);
-      transform: translate(320px, -1000px); }
-    .s2 ul li:nth-child(2) {
-      -webkit-transform: translate(0px, -1000px);
-      -moz-transform: translate(0px, -1000px);
-      -ms-transform: translate(0px, -1000px);
-      -o-transform: translate(0px, -1000px);
-      transform: translate(0px, -1000px); }
-    .s2 ul li:nth-child(3) {
-      -webkit-transform: translate(-320px, -1000px);
-      -moz-transform: translate(-320px, -1000px);
-      -ms-transform: translate(-320px, -1000px);
-      -o-transform: translate(-320px, -1000px);
-      transform: translate(-320px, -1000px); }
-.s2.active li:nth-child(1) {
-  -webkit-animation: move1 1s 0.5s forwards;
-  -moz-animation: move1 1s 0.5s forwards;
-  -ms-animation: move1 1s 0.5s forwards;
-  -o-animation: move1 1s 0.5s forwards;
-  animation: move1 1s 0.5s forwards; }
-.s2.active li:nth-child(2) {
-  -webkit-animation: move2 1s 0.5s forwards;
-  -moz-animation: move2 1s 0.5s forwards;
-  -ms-animation: move2 1s 0.5s forwards;
-  -o-animation: move2 1s 0.5s forwards;
-  animation: move2 1s 0.5s forwards; }
-.s2.active li:nth-child(3) {
-  -webkit-animation: move3 1s 0.5s forwards;
-  -moz-animation: move3 1s 0.5s forwards;
-  -ms-animation: move3 1s 0.5s forwards;
-  -o-animation: move3 1s 0.5s forwards;
-  animation: move3 1s 0.5s forwards; }
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    margin: 20px auto; }
+    .s2 ul#skill-tip li label.skill-name {
+      float: left;
+      font-size: 16px;
+      font-weight: bold;
+      color: #3f3f5f;
+      width: 65px;
+      text-align: center; }
+    .s2 ul#skill-tip li span.skill-wrap {
+      position: relative;
+      float: left;
+      width: 85%;
+      height: 100%;
+      border-radius: 15px;
+      background-color: #53537E;
+      margin-left: 30px; }
+      .s2 ul#skill-tip li span.skill-wrap span.skill-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ddd;
+        height: 100%;
+        border-radius: 15px 0 0 15px; }
+.s2.active ul {
+  -webkit-animation: move 1.5s 0.5s forwards;
+  -moz-animation: move 1.5s 0.5s forwards;
+  -ms-animation: move 1.5s 0.5s forwards;
+  -o-animation: move 1.5s 0.5s forwards;
+  animation: move 1.5s 0.5s forwards; }
 
 /*第三页*/
 .s3 .experience-box {
@@ -435,22 +307,7 @@ header {
   width: 20%;
   float: left;
   padding: 0 25px;
-  transform: translateY(1000px);
-    /* &:nth-child(1) {
-       transform: translateX(0);
-     }
-     &:nth-child(2) {
-       transform: translateX(-320px);
-
-     }
-     &:nth-child(3) {
-       transform: translateX(-660px);
-
-     }
-     &:nth-child(4) {
-       transform: translateX(-980px);
-
-     }*/ }
+  transform: translateY(1000px); }
   .s3 ul.experience-info li {
     display: list-item;
     text-align: center; }
@@ -489,7 +346,7 @@ header {
     .s3 ul.experience-info li:nth-child(3) {
       text-align: left;
       padding-top: 10px;
-      color: #EEEEEE; }
+      color: #d9f1ed; }
 .s3.active ul {
   /*transform: translateX(0);
   transition: 0.8s 0.5s;*/
@@ -505,41 +362,41 @@ header {
     transition-delay: 0.8s; }
 
 /*第四页*/
-.s4 .education {
+.s5 .education {
   float: left;
   -webkit-transform: translateX(-1000px);
   -moz-transform: translateX(-1000px);
   -ms-transform: translateX(-1000px);
   -o-transform: translateX(-1000px);
   transform: translateX(-1000px); }
-  .s4 .education ul {
+  .s5 .education ul {
     width: 250px;
     font-size: 17px; }
-    .s4 .education ul li {
+    .s5 .education ul li {
       height: 35px;
       line-height: 35px; }
-  .s4 .education .bg-icon {
+  .s5 .education .bg-icon {
     height: 35px; }
-  .s4 .education h1 {
+  .s5 .education h1 {
     padding-left: 50px; }
-.s4 .award {
+.s5 .award {
   float: right;
   -webkit-transform: translateX(1000px);
   -moz-transform: translateX(1000px);
   -ms-transform: translateX(1000px);
   -o-transform: translateX(1000px);
   transform: translateX(1000px); }
-  .s4 .award ul {
+  .s5 .award ul {
     width: 400px;
     font-size: 17px; }
-    .s4 .award ul li {
+    .s5 .award ul li {
       height: 35px;
       line-height: 35px; }
-  .s4 .award .bg-icon {
+  .s5 .award .bg-icon {
     height: 35px; }
-  .s4 .award li {
+  .s5 .award li {
     width: 300px; }
-.s4.active .box div {
+.s5.active .box div {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -550,28 +407,34 @@ header {
   -ms-transiton: 1s;
   -o-transition: 1s;
   transition: 1s; }
-  .s4.active .box div:nth-child(1) {
+  .s5.active .box div:nth-child(1) {
     transition-delay: 0.3s; }
-  .s4.active .box div:nth-child(2) {
+  .s5.active .box div:nth-child(2) {
     transition-delay: 0.75s; }
 
 /*第五页*/
-.s5 ul {
-  width: 1000px;
-  margin: 0 auto; }
-  .s5 ul li {
-    float: left;
-    margin: 0 10px;
-    transform: translateY(1000px); }
-.s5.active ul li {
-  transform: translateY(0);
-  transition: 0.8s; }
-  .s5.active ul li:nth-child(1) {
-    transition-delay: 0.5s; }
-  .s5.active ul li:nth-child(2) {
-    transition-delay: 0.6s; }
-  .s5.active ul li:nth-child(3) {
-    transition-delay: 0.75s; }
+.s4.section .internships {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 28px;
+  text-align: center; }
+  .s4.section .internships h3 {
+    color: #e5eef6;
+    margin: 10px auto; }
+  .s4.section .internships h4 {
+    font-size: 22px;
+    color: #e5eef6;
+    font-weight: normal;
+    margin: 2px auto; }
+  .s4.section .internships h5 {
+    color: #e5eef6;
+    font-size: 20px;
+    font-weight: normal; }
+  .s4.section .internships p {
+    text-align: left;
+    font-size: 18px;
+    color: #cde;
+    margin-top: 25px; }
 
 @media screen and (max-width: 1255px) {
   /*项目经验*/
@@ -579,6 +442,14 @@ header {
     padding: 0 18px; }
     .section.s3 ul.experience-info li:nth-child(2) a {
       font-size: 22px; } }
+@media screen and (max-width: 1080px) {
+  /*专业技能*/
+  .s2 ul#skill-tip {
+    width: 70%; }
+    .s2 ul#skill-tip li {
+      width: 100%; }
+      .s2 ul#skill-tip li span.skill-wrap {
+        width: 80%; } }
 @media screen and (max-width: 908px) {
   /*项目经验*/
   .section.s3 .box {
@@ -601,23 +472,43 @@ header {
 @media screen and (max-width: 700px) {
   /*头部菜单栏*/
   header #menu {
-    width: 422px; }
+    width: 438px; }
     header #menu li a {
       margin: 0 15px;
       font-size: 16px; }
 
+  /*专业技能*/
+  .s2 ul#skill-tip {
+    width: 70%; }
+    .s2 ul#skill-tip li {
+      width: 100%; }
+      .s2 ul#skill-tip li span.skill-wrap {
+        width: 70%; }
+
   /*教育背景*/
-  #main .section.s4 h1 {
+  #main .section.s5 h1 {
     font-size: 26px; } }
 @media screen and (max-width: 650px) {
   /*教育背景*/
-  #main .section.s4 h1 {
+  #main .section.s5 h1 {
     font-size: 24px; }
 
-  .section.s4 .award ul {
+  .section.s5 .award ul {
     width: 300px; }
-  .section.s4 span {
-    font-size: 14px; } }
+  .section.s5 span {
+    font-size: 14px; }
+
+  /*实习经历*/
+  .s4.section .internships {
+    width: 60%; }
+    .s4.section .internships h3 {
+      font-size: 26px; }
+    .s4.section .internships h4 {
+      font-size: 20px; }
+    .s4.section .internships h5 {
+      font-size: 18px; }
+    .s4.section .internships p {
+      font-size: 16px; } }
 @media screen and (max-width: 555px) {
   .section.s3 .experience-box {
     width: 80%; }
@@ -626,7 +517,7 @@ header {
   .section.s3 ul.experience-info {
     display: block;
     width: 100%;
-    padding: 3% 0; }
+    padding: 1% 0; }
     .section.s3 ul.experience-info li {
       margin: 1% auto; }
     .section.s3 ul.experience-info li:first-child {
@@ -648,45 +539,69 @@ header {
       padding-top: 5px; }
 
   /*教育背景*/
-  .section.s4 .award ul {
+  .section.s5 .award ul {
     width: 280px; }
-  .section.s4 .education
+  .section.s5 .education
   h1 {
     padding-left: 80px; }
-  .section.s4 ul {
+  .section.s5 ul {
     width: 200px; }
-  .section.s4 span {
+  .section.s5 span {
     font-size: 13px; } }
 @media screen and (max-width: 480px) {
   /*头部导航栏*/
   header #menu {
-    width: 318px; }
+    width: 332px; }
     header #menu li a {
       height: 30px;
       line-height: 30px;
       margin: 0 8px;
       font-size: 14px; }
 
+  /*专业技能*/
+  .s2 ul#skill-tip {
+    width: 78%; }
+    .s2 ul#skill-tip li {
+      width: 100%;
+      height: 15px;
+      line-height: 15px;
+      margin: 15px auto; }
+      .s2 ul#skill-tip li span.skill-wrap {
+        width: 70%;
+        margin-left: 22px; }
+
   /*教育背景*/
-  #main .section.s4 .box .tb-cell ul {
+  #main .section.s5 .box .tb-cell ul {
     margin: 3px auto; }
-    #main .section.s4 .box .tb-cell ul li {
+    #main .section.s5 .box .tb-cell ul li {
       display: block;
       margin: 3px auto; }
-  #main .section.s4 h1 {
+  #main .section.s5 h1 {
     font-size: 18px;
     font-weight: bold; }
 
-  .section.s4 .box {
+  .section.s5 .box {
     padding-top: 30px; }
-    .section.s4 .box div {
+    .section.s5 .box div {
       margin: 5px auto;
       clear: both; }
-  .section.s4 .award ul {
+  .section.s5 .award ul {
     width: 200px; }
-  .section.s4 .education h1 {
+  .section.s5 .education h1 {
     padding-left: 0; } }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 420px) {
+  /*实习经历*/
+  .s4.section .internships {
+    width: 70%; }
+    .s4.section .internships h3 {
+      font-size: 24px; }
+    .s4.section .internships h4 {
+      font-size: 18px; }
+    .s4.section .internships h5 {
+      font-size: 16px; }
+    .s4.section .internships p {
+      font-size: 14px; } }
+@media screen and (max-width: 375px) {
   /*背景图标*/
   #main .box .tb-cell ul {
     margin: 2px auto; }
@@ -715,8 +630,22 @@ header {
   #main .section h2 {
     font-size: 18px; }
 
+  /*专业技能*/
+  .s2 ul#skill-tip {
+    width: 80%; }
+    .s2 ul#skill-tip li {
+      width: 100%; }
+      .s2 ul#skill-tip li label.skill-name {
+        font-size: 14px; }
+      .s2 ul#skill-tip li span.skill-wrap {
+        width: 65%;
+        margin-left: 18px; }
+
+  /*项目经验*/
   .section.s3 .experience-box {
     width: 80%; }
+  .section.s3 .box {
+    padding-top: 50px; }
   .section.s3 .box .tb-cell ul {
     margin: 0; }
   .section.s3 ul.experience-info {
@@ -748,9 +677,9 @@ header {
 
   /*头部菜单栏*/
   header #menu {
-    width: 300px; }
+    width: 302px; }
     header #menu li a {
-      margin: 0 6px;
+      margin: 0 5px;
       font-size: 14px; }
 
   #main .section h1 {
@@ -761,6 +690,12 @@ header {
     width: 100px;
     height: 100px; }
 
+  /*专业技能*/
+  .s2 ul#skill-tip li {
+    height: 13px;
+    line-height: 13px;
+    margin: 12px auto; }
+
   /*项目经验*/
   .section.s3 ul.experience-info li {
     font-size: 12px; }
@@ -769,15 +704,58 @@ header {
     .section.s3 ul.experience-info li:nth-child(3) {
       padding-top: 0; } }
 @media screen and (max-width: 300px) {
+  #main .section {
+    overflow: scroll;
+    min-width: 300px; }
+
   /*头部菜单栏*/
   header #menu {
-    width: 278px; }
+    width: 280px; }
     header #menu li a {
       margin: 0 4px;
-      font-size: 14px; }
+      font-size: 12px; }
 
-  body {
-    min-width: 320px;
-    overflow: scroll; } }
+  /*首页*/
+  /*背景图标*/
+  #main .box .tb-cell ul {
+    margin: 2px auto; }
+    #main .box .tb-cell ul li .bg-icon {
+      width: 40px;
+      height: 18px; }
+
+  .s1 ul.contact {
+    width: 220px;
+    padding-left: 40px; }
+  .s1 .my-photo {
+    margin: 5px auto; }
+    .s1 .my-photo img {
+      width: 100px;
+      height: 100px; }
+  .s1 .home ul {
+    font-size: 12px; }
+    .s1 .home ul li {
+      height: 18px;
+      line-height: 18px; }
+
+  #main .section h1 {
+    font-size: 20px; }
+  #main .section h2 {
+    font-size: 15px; }
+
+  /*项目经验*/
+  .section.s3 ul.experience-info li:first-child {
+    width: 25px;
+    float: left; }
+    .section.s3 ul.experience-info li:first-child i.experience-icon {
+      height: 25px;
+      background-size: 25px; }
+  .section.s3 ul.experience-info li:nth-child(2) {
+    float: left;
+    line-height: 25px;
+    padding-left: 20px; }
+    .section.s3 ul.experience-info li:nth-child(2) a {
+      font-size: 13px; }
+  .section.s3 ul.experience-info:nth-child(3) {
+    padding-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

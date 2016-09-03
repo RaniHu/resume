@@ -111,7 +111,7 @@ $transition-delay: 0.5s;
           float: left;
         }
         //循环遍历每个背景图标
-        $contact: phone, email, weixin, github, location, degree, university, major, award-list, position, resume-icon, game, myslider, hospital;
+        $contact: phone, email, weixin, github, location, degree, university, major, award-list, position, resume-icon, game, myslider, house;
         @each $contact-style in $contact {
           .#{$contact-style} {
             background: url("../img/#{$contact-style}.png") no-repeat center;
@@ -201,147 +201,95 @@ $transition-delay: 0.5s;
 
 /*第二页弹性动画*/
 /*定义时间帧*/
-@-webkit-keyframes move1 {
+
+@-webkit-keyframes move {
   0% {
-    @include transform(translate(320px, -1000px))
-  }
-  20% {
-    @include transform(translate(320px, 0px))
+    @include transform(translateY(-1000px))
   }
   40% {
-    @include transform(translate(320px, -50px))
+    @include transform(translateY(60px))
   }
   60% {
-    @include transform(translate(320px, 0px))
+    @include transform(translateY(0px))
   }
   100% {
-    @include transform(translate(0px, 0px))
+    @include transform(translateY( 20px))
   }
+ /* 100% {
+    @include transform(translateY( 0px))
+  }*/
 }
 
-@keyframes move1 {
+@keyframes move {
   0% {
-    @include transform(translate(320px, -1000px))
-  }
-  20% {
-    @include transform(translate(320px, 0px))
+    @include transform(translateY(-1000px))
   }
   40% {
-    @include transform(translate(320px, -50px))
+    @include transform(translateY(60px))
   }
   60% {
-    @include transform(translate(320px, 0px))
+    @include transform(translateY(0px))
   }
   100% {
-    @include transform(translate(0px, 0px))
+    @include transform(translateY( 20px))
   }
+  /*100% {
+    @include transform(translateY( 0px))
+  }*/
 }
 
-@-webkit-keyframes move2 {
-  0% {
-    @include transform(translate(0px, -1000px))
-  }
-  20% {
-    @include transform(translate(0px, 0px))
-  }
-  40% {
-    @include transform(translate(0px, -50px))
-  }
-  60% {
-    @include transform(translate(0px, 0px))
-  }
-  100% {
-    @include transform(translate(0px, 0px))
-  }
-}
 
-@keyframes move2 {
-  0% {
-    @include transform(translate(0px, -1000px))
-  }
-  20% {
-    @include transform(translate(0px, 0px))
-  }
-  40% {
-    @include transform(translate(0px, -50px))
-  }
-  60% {
-    @include transform(translate(0px, 0px))
-  }
-  100% {
-    @include transform(translate(0px, 0px))
-  }
-}
-
-@-webkit-keyframes move3 {
-  0% {
-    @include transform(translate(-320px, -1000px))
-  }
-  20% {
-    @include transform(translate(-320px, 0px))
-  }
-  40% {
-    @include transform(translate(-320px, -50px))
-  }
-  60% {
-    @include transform(translate(-320px, 0px))
-  }
-  100% {
-    @include transform(translate(0px, 0px))
-  }
-}
-
-@keyframes move3 {
-  0% {
-    @include transform(translate(-320px, -1000px))
-  }
-  20% {
-    @include transform(translate(-320px, 0px))
-  }
-  40% {
-    @include transform(translate(-320px, -50px))
-  }
-  60% {
-    @include transform(translate(-320px, 0px))
-  }
-  100% {
-    @include transform(translate(0px, 0px))
-  }
-}
 
 .s2 {
-  ul {
-    width: 1000px;
+  ul#skill-tip {
+    width: 60%;
     margin: 0 auto;
+    text-align: center;
+    @include transform(translateY(-1000px));
     li {
+      display: block;
       float: left;
-      margin: 0 10px;
-      &:nth-child(1) {
-        @include transform(translate(320px, -1000px));
+      width: 100%;
+      height: 18px;
+      line-height: 18px;
+      margin: 20px auto;
+      label.skill-name {
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: #3f3f5f;
+        width: 65px;
+        text-align: center;
       }
-      &:nth-child(2) {
-        @include transform(translate(0px, -1000px));
+      span.skill-wrap {
+        position: relative;
+        float: left;
+        width: 85%;
+        height: 100%;
+        border-radius: 15px;
+        background-color: #53537E;
+        margin-left: 30px;
+        span.skill-bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #ddd;
+          height: 100%;
+          border-radius: 15px 0 0 15px;
+        }
       }
-      &:nth-child(3) {
-        @include transform(translate(-320px, -1000px));
-      }
+
     }
   }
   @at-root
   .s2.active {
-    li {
-      &:nth-child(1) {
-        @include animation(move1 1s $transition-delay forwards) //forwards为停留在最后一个动画
-      }
-      &:nth-child(2) {
-        @include animation(move2 1s $transition-delay forwards)
-      }
-      &:nth-child(3) {
-        @include animation(move3 1s $transition-delay forwards)
-      }
+    ul {
+      @include animation(move 1.5s $transition-delay forwards)
     }
   }
+
 }
+
 
 /*第三页*/
 .s3 {
@@ -355,21 +303,6 @@ $transition-delay: 0.5s;
     float: left;
     padding: 0 25px;
     transform: translateY(1000px);
-    /* &:nth-child(1) {
-       transform: translateX(0);
-     }
-     &:nth-child(2) {
-       transform: translateX(-320px);
-
-     }
-     &:nth-child(3) {
-       transform: translateX(-660px);
-
-     }
-     &:nth-child(4) {
-       transform: translateX(-980px);
-
-     }*/
 
     li {
       display: list-item;
@@ -403,7 +336,7 @@ $transition-delay: 0.5s;
       &:nth-child(3) {
         text-align: left;
         padding-top: 10px;
-        color: #EEEEEE;
+        color: #d9f1ed;
       }
     }
 
@@ -435,7 +368,7 @@ $transition-delay: 0.5s;
 }
 
 /*第四页*/
-.s4 {
+.s5 {
   .education {
     float: left;
     @include ul-list-style(250px, 35px, 35px, 17px);
@@ -454,7 +387,7 @@ $transition-delay: 0.5s;
   }
 
   @at-root
-  .s4.active {
+  .s5.active {
     .box div {
       @include transform(translateX(0));
       @include transition(1s);
@@ -470,34 +403,33 @@ $transition-delay: 0.5s;
 }
 
 /*第五页*/
-.s5 {
-  ul {
-    width: 1000px;
+.s4.section {
+  .internships{
+    width:50%;
     margin: 0 auto;
-    li {
-      float: left;
-      margin: 0 10px;
-      transform: translateY(1000px);
+    font-size: 28px;
+    text-align: center;
+    h3{
+      color: #e5eef6;
+      margin: 10px auto;
     }
-  }
-  @at-root
-  .s5.active {
-    ul {
-      li {
-        transform: translateY(0);
-        transition: 0.8s;
-        &:nth-child(1) {
-          transition-delay: $transition-delay;
-        }
-        &:nth-child(2) {
-          transition-delay: $transition-delay * 1.2;
-        }
-        &:nth-child(3) {
-          transition-delay: $transition-delay * 1.5;
-        }
-      }
+    h4{
+      font-size: 22px;
+      color: #e5eef6;
+      font-weight: normal;
+      margin:2px auto;
     }
-
+    h5{
+      color: #e5eef6;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    p{
+      text-align: left;
+      font-size: 18px;
+      color: #cde;
+      margin-top: 25px;
+    }
   }
 }
 
@@ -515,7 +447,23 @@ $transition-delay: 0.5s;
   }
 }
 
+@media screen and (max-width: 1080px) {
+  /*专业技能*/
+  .s2 {
+    ul#skill-tip {
+      width: 70%;
+      li {
+        width: 100%;
+        span.skill-wrap {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 908px) {
+
   /*项目经验*/
   .section.s3 {
     .box {
@@ -552,30 +500,62 @@ $transition-delay: 0.5s;
 @media screen and (max-width: 700px) {
   /*头部菜单栏*/
   header #menu {
-    width: 422px;
+    width: 438px;
     li a {
       margin: 0 15px;
       font-size: 16px;
     }
   }
 
+  /*专业技能*/
+  .s2 {
+    ul#skill-tip {
+      width: 70%;
+      li {
+        width: 100%;
+        span.skill-wrap {
+          width: 70%;
+        }
+      }
+    }
+  }
+
   /*教育背景*/
-  #main .section.s4 h1 {
+  #main .section.s5 h1 {
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 650px) {
   /*教育背景*/
-  #main .section.s4 h1 {
+  #main .section.s5 h1 {
     font-size: 24px;
   }
-  .section.s4 {
+  .section.s5 {
     .award ul {
       width: 300px;
     }
     span {
       font-size: 14px;
+    }
+  }
+
+  /*实习经历*/
+  .s4.section {
+    .internships{
+      width:60%;
+      h3{
+        font-size: 26px;
+      }
+      h4{
+        font-size: 20px;
+      }
+      h5{
+        font-size: 18px;
+      }
+      p{
+        font-size: 16px;
+      }
     }
   }
 
@@ -593,7 +573,7 @@ $transition-delay: 0.5s;
     ul.experience-info {
       display: block;
       width: 100%;
-      padding: 3% 0;
+      padding: 1% 0;
       li {
         margin: 1% auto;
       }
@@ -623,7 +603,7 @@ $transition-delay: 0.5s;
   }
 
   /*教育背景*/
-  .section.s4 {
+  .section.s5 {
     .award ul {
       width: 280px;
     }
@@ -645,7 +625,7 @@ $transition-delay: 0.5s;
 
   /*头部导航栏*/
   header #menu {
-    width: 318px;
+    width: 332px;
     li a {
       height: 30px;
       line-height: 30px;
@@ -654,8 +634,25 @@ $transition-delay: 0.5s;
     }
   }
 
+  /*专业技能*/
+  .s2 {
+    ul#skill-tip {
+      width: 78%;
+      li {
+        width: 100%;
+        height: 15px;
+        line-height: 15px;
+        margin: 15px auto;
+        span.skill-wrap {
+          width: 70%;
+          margin-left: 22px;
+        }
+      }
+    }
+  }
+
   /*教育背景*/
-  #main .section.s4 {
+  #main .section.s5 {
     .box .tb-cell ul {
       margin: 3px auto;
       li {
@@ -669,7 +666,7 @@ $transition-delay: 0.5s;
       font-weight: bold;
     }
   }
-  .section.s4 {
+  .section.s5 {
     .box {
       padding-top: 30px;
       div {
@@ -686,9 +683,31 @@ $transition-delay: 0.5s;
 
   }
 }
+//iphone6 plus
+@media screen and(max-width: 420px) {
 
+  /*实习经历*/
+  .s4.section {
+    .internships{
+      width:70%;
+      h3{
+        font-size: 24px;
+      }
+      h4{
+        font-size: 18px;
+      }
+      h5{
+        font-size: 16px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+
+}
 //iphone6
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 375px) {
   /*背景图标*/
   #main .box .tb-cell ul {
     margin: 2px auto;
@@ -728,9 +747,30 @@ $transition-delay: 0.5s;
       font-size: 18px;
     }
   }
+
+  /*专业技能*/
+  .s2 {
+    ul#skill-tip {
+      width: 80%;
+      li {
+        width: 100%;
+        label.skill-name {
+          font-size: 14px;
+        }
+        span.skill-wrap {
+          width: 65%;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+  /*项目经验*/
   .section.s3 {
     .experience-box {
       width: 80%;
+    }
+    .box {
+      padding-top: 50px;
     }
     .box .tb-cell ul {
       margin: 0;
@@ -774,9 +814,9 @@ $transition-delay: 0.5s;
   }
   /*头部菜单栏*/
   header #menu {
-    width: 300px;
+    width: 302px;
     li a {
-      margin: 0 6px;
+      margin: 0 5px;
       font-size: 14px;
     }
   }
@@ -794,16 +834,28 @@ $transition-delay: 0.5s;
     }
   }
 
+  /*专业技能*/
+  .s2 {
+    ul#skill-tip {
+      li {
+        height: 13px;
+        line-height: 13px;
+        margin: 12px auto;
+      }
+    }
+  }
+
   /*项目经验*/
-  .section.s3 ul.experience-info{
-    li{
+  .section.s3 ul.experience-info {
+    li {
       font-size: 12px;
-      &:nth-child(2){
-        a{
+      &:nth-child(2) {
+        a {
 
           font-size: 14px;
         }
-      }&:nth-child(3){
+      }
+      &:nth-child(3) {
         padding-top: 0;
       }
     }
@@ -811,16 +863,79 @@ $transition-delay: 0.5s;
 }
 
 @media screen and (max-width: 300px) {
+  #main .section {
+    overflow: scroll;
+    min-width: 300px;
+  }
   /*头部菜单栏*/
   header #menu {
-    width: 278px;
+    width: 280px;
     li a {
       margin: 0 4px;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
-  body {
-    min-width: 320px;
-    overflow: scroll;
+  /*首页*/
+  /*背景图标*/
+  #main .box .tb-cell ul {
+    margin: 2px auto;
+    li .bg-icon {
+      width: 40px;
+      height: 18px;
+    }
+  }
+  .s1 {
+    ul.contact {
+      width: 220px;
+      padding-left: 40px;
+    }
+    .my-photo {
+      margin: 5px auto;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .home ul {
+      font-size: 12px;
+      li {
+        height: 18px;
+        line-height: 18px;
+      }
+    }
+
+  }
+  #main .section {
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+
+  /*项目经验*/
+  .section.s3 ul.experience-info {
+    li:first-child {
+      width: 25px;
+      float: left;
+      i.experience-icon {
+        height: 25px;
+        background-size: 25px;
+      }
+    }
+    li:nth-child(2) {
+      float: left;
+      line-height: 25px;
+      padding-left: 20px;
+      a {
+        font-size: 13px;
+      }
+    }
+    &:nth-child(3) {
+      padding-top: 0;
+    }
   }
 }
+
+

@@ -16,7 +16,7 @@
         <li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
         <li data-menuanchor="page3"><a href="#page3">项目经验</a></li>
         <li data-menuanchor="page4"><a href="#page4">个人信息</a></li>
-        <li data-menuanchor="page5"><a href="#page5">关于我</a></li>
+        <li data-menuanchor="page5"><a href="#page5">实习经历</a></li>
     </ul>
 </header>
 
@@ -46,42 +46,95 @@
     </section>
     <!-- 专业技能-->
     <section class="section s2">
-        <ul class="food">
-            <li><img src="img/s3/food1.jpg"></li>
-            <li><img src="img/s3/food3.jpg"></li>
-            <li><img src="img/s3/food2.jpg"></li>
+        <ul id="skill-tip">
+            <li>
+                <label class="skill-name">HTML</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:75%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">CSS</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:70%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">JavaScript</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:50%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">jQuery</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:45%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">SASS</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:40%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">Mysql</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:30%"></span>
+                </span>
+            </li>
+            <li>
+                <label class="skill-name">django</label>
+                <span class="skill-wrap">
+                    <span class="skill-bar" style="width:25%"></span>
+                </span>
+            </li>
+            <div class="clearfix"></div>
         </ul>
     </section>
     <!-- 项目经验-->
     <section class="section s3">
-         <div class="box experience-box">
+        <div class="box experience-box">
             <div class="experience tb-cell">
                 <ul class="experience-info">
-                    <li><a href="https://github.com/RaniHu/resume"><i class="experience-icon resume-icon "> </i></a></li>
+                    <li><a href="https://github.com/RaniHu/resume"><i class="experience-icon resume-icon "> </i></a>
+                    </li>
                     <li class="experience-title"><a href="https://github.com/RaniHu/resume">响应式简历</a></li>
-                    <li>利用fullpage.js插件实现鼠标滚动过渡效果。合理运用了css3的动画过渡、变形等属性实现一些动画效果。运用css3媒体查询实现了在线简历的响应式设计。</li>
+                    <li>利用fullpage.js插件实现鼠标滚动与手指滑动过渡效果。合理运用了css3的动画过渡,变形等属性实现一些图片文字的动画效果。运用css3媒体查询实现了在线简历的响应式设计。</li>
                 </ul>
                 <ul class="experience-info">
                     <li><a href="https://ranihu.github.io/2048/"><i class="experience-icon game"> </i></a></li>
                     <li class="experience-title"><a href="https://ranihu.github.io/2048/">2048小游戏</a></li>
-                    <li>基本还原原版2048小游戏,适配了pc端和移动端。</li>
+                    <li>基本还原原版2048小游戏,利用js随机数随机生成2或4的小方块,在滑动时相同数字方块重合叠加。适配了pc端和移动端。</li>
                 </ul>
                 <ul class="experience-info">
                     <li><a href="https://ranihu.github.io/myslider/"><i class="experience-icon myslider"> </i></a></li>
                     <li class="experience-title"><a href="https://ranihu.github.io/myslider/">MySlider插件</a></li>
-                    <li>这是一个基于jQuery的轻量级轮播图插件。支持淡入淡出、左右滑动、自动轮播等动画方式，可选择是否需要适配手机端。</li>
+                    <li>这是一个基于jQuery的轻量级轮播图插件。支持淡入淡出,左右滑动,自动轮播等动画方式。可选择是否需要适配手机端。</li>
                 </ul>
                 <ul class="experience-info">
-                    <li><a href="#"><i class="experience-icon hospital"> </i></a></li>
-                    <li class="experience-title"><a href="#">社区诊疗系统</a></li>
-                    <li>在实习期间参与了社区诊疗系统医生端的开发。</li>
+                    <li><a href="https://github.com/RaniHu/doctor"><i class="experience-icon house"> </i></a></li>
+                    <li class="experience-title"><a href="https://github.com/RaniHu/doctor">用家网站</a></li>
+                    <li>项目小组成员共四人，我主要负责用代码实现成员设计出的psd稿, 分别使用了WebStorm开发工具,SQL Sever数据库,JavaScript等开发技术，实现了网站的布局和交互效果。
+                    </li>
                 </ul>
             </div>
-         </div>
+        </div>
 
     </section>
-    <!-- 个人信息-->
+    <!-- 实习经历-->
     <section class="section s4">
+        <div class="internships">
+            <h3>2016.03 - 2016.07</h3>
+            <h4>武汉朗风数据科技有限公司</h4>
+            <h5>前端开发实习生</h5>
+
+            <p>实习期间主要在设计和开发分级诊疗系统医生端板块。此系统主要针对武汉的社区服务站,系统的功能包括医生工作:处理挂号,管理电子病历,预约上门。社交部分:
+                医生拥有个人主页,可关注其他医生和医院,发布医院相关信息和心得)。项目中我主要负责用html，css，js实现前端页面，利用django框架和MySql数据库完成基本的功能（数据库的增删查改）。</p>
+        </div>
+    </section>
+    <!--个人信息-->
+    <section class="section s5">
         <div class="box">
             <div class="education tb-cell">
                 <h1>教育背景</h1>
@@ -101,13 +154,6 @@
             </div>
         </div>
     </section>
-    <section class="section s5">
-        <ul class="food">
-            <li><img src="img/s3/food1.jpg"></li>
-            <li><img src="img/s3/food3.jpg"></li>
-            <li><img src="img/s3/food2.jpg"></li>
-        </ul>
-    </section>
 </div>
 
 
@@ -116,14 +162,14 @@
         $("#main").fullpage({
             verticalCentered: true,                                       //内容垂直居中
             css3: true,
-            resize:true,
-            sectionsColor: ['#23BBB1', '#666699', '#22c3aa', '#009966', '#336699'],   //设置每一页背景颜色
+            resize: true,
+            sectionsColor: ['#23BBB1', '#666699', '#5dc3b1', '#336699', '#009966'],   //设置每一页背景颜色
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],                   //定义锚链接
             scrollingSpeed: 500,                                              //滚动速度
             menu: "#menu",
             navigation: true,                                              //显示项目导航
             navigationPosition: 'right',                                   //导航位置
-            navigationTooltips: ['首页', '专业技能', '项目经验', '个人信息', '联系方式'],     //导航圈的文字
+            navigationTooltips: ['首页', '专业技能', '项目经验', '实习经历', '个人信息'],     //导航圈的文字
             navigationColor: '',                                      //导航颜色
             slidesNavigation: '',                               //显示左右滑块的项目导航
             slidesNavPosition: 'bottom',                              //设置左右滑块的导航位置
@@ -140,8 +186,6 @@
     });
 
     //回调函数
-
-
 
 
 </script>
