@@ -708,6 +708,11 @@ $transition-delay: 0.5s;
 }
 //iphone6
 @media screen and (max-width: 375px) {
+
+  /*头部*/
+  header{
+    top:12px;
+  }
   /*背景图标*/
   #main .box .tb-cell ul {
     margin: 2px auto;
@@ -759,7 +764,7 @@ $transition-delay: 0.5s;
         }
         span.skill-wrap {
           width: 65%;
-          margin-left: 18px;
+          margin-left: 12px;
         }
       }
     }
@@ -784,16 +789,16 @@ $transition-delay: 0.5s;
         margin: 1% auto;
       }
       li:first-child {
-        width: 35px;
+        width: 30px;
         float: left;
         i.experience-icon {
-          height: 35px;
-          background-size: 35px;
+          height: 30px;
+          background-size: 30px;
         }
       }
       li:nth-child(2) {
         float: left;
-        line-height: 35px;
+        line-height: 30px;
         padding-left: 20px;
         a {
           font-size: 16px;
