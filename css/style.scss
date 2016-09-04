@@ -756,7 +756,7 @@ $transition-delay: 0.5s;
   /*首页*/
   .s1 {
     ul.contact {
-      width: 220px;
+      width: 250px;
       padding-left: 30px;
     }
     .my-photo {
@@ -766,11 +766,12 @@ $transition-delay: 0.5s;
         height: 120px;
       }
     }
-    .home ul {
+    .home
+    ul {
       font-size: 13px;
       li {
-        height: 20px;
-        line-height: 20px;
+        height: 25px;
+        line-height: 25px;
       }
     }
 

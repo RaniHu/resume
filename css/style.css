@@ -652,18 +652,20 @@ header {
 
   /*首页*/
   .s1 ul.contact {
-    width: 220px;
+    width: 250px;
     padding-left: 30px; }
   .s1 .my-photo {
     margin: 5px auto; }
     .s1 .my-photo img {
       width: 120px;
       height: 120px; }
-  .s1 .home ul {
+  .s1 .home
+  ul {
     font-size: 13px; }
-    .s1 .home ul li {
-      height: 20px;
-      line-height: 20px; }
+    .s1 .home
+    ul li {
+      height: 25px;
+      line-height: 25px; }
 
   #main .section h1 {
     font-size: 26px;
