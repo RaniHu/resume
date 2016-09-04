@@ -276,7 +276,7 @@ header {
       font-weight: bold;
       color: #3f3f5f;
       width: 65px;
-      text-align: center; }
+      text-align: left; }
     .s2 ul#skill-tip li span.skill-wrap {
       position: relative;
       float: left;
@@ -686,7 +686,7 @@ header {
   .section.s3 .experience-box {
     width: 80%; }
   .section.s3 .box {
-    padding-top: 5px; }
+    padding-top: 20px; }
   .section.s3 ul.experience-info {
     display: block;
     width: 100%;
