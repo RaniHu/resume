@@ -744,6 +744,10 @@ $transition-delay: 0.5s;
   /*头部*/
   header{
     top:10px;
+    #menu li a{
+      height: 28px;
+      line-height: 28px;
+    }
   }
   /*背景图标*/
   #main .box .tb-cell ul {
@@ -756,7 +760,7 @@ $transition-delay: 0.5s;
   /*首页*/
   .s1 {
     ul.contact {
-      width: 250px;
+      width: 220px;
       padding-left: 30px;
     }
     .my-photo {
@@ -808,7 +812,7 @@ $transition-delay: 0.5s;
       width: 80%;
     }
     .box {
-      padding-top: 20px;
+      padding-top: 25px;
     }
     ul.experience-info {
       display: block;

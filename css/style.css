@@ -642,6 +642,9 @@ header {
   /*头部*/
   header {
     top: 10px; }
+    header #menu li a {
+      height: 28px;
+      line-height: 28px; }
 
   /*背景图标*/
   #main .box .tb-cell ul {
@@ -652,7 +655,7 @@ header {
 
   /*首页*/
   .s1 ul.contact {
-    width: 250px;
+    width: 220px;
     padding-left: 30px; }
   .s1 .my-photo {
     margin: 5px auto; }
@@ -688,7 +691,7 @@ header {
   .section.s3 .experience-box {
     width: 80%; }
   .section.s3 .box {
-    padding-top: 20px; }
+    padding-top: 25px; }
   .section.s3 ul.experience-info {
     display: block;
     width: 100%;
