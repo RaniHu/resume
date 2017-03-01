@@ -4,7 +4,7 @@
   margin: 0; }
 
 body {
-  font-family: 'Microsoft Yahei'; }
+  font-family: Lato, 'Microsoft Yahei'; }
 
 li {
   list-style: none; }
@@ -274,7 +274,7 @@ header {
       float: left;
       font-size: 16px;
       font-weight: bold;
-      color: #3f3f5f;
+      color: #2d3d61;
       width: 65px;
       text-align: left; }
     .s2 ul#skill-tip li span.skill-wrap {
@@ -283,7 +283,7 @@ header {
       width: 85%;
       height: 100%;
       border-radius: 15px;
-      background-color: #53537E;
+      background-color: #354873;
       margin-left: 30px; }
       .s2 ul#skill-tip li span.skill-wrap span.skill-bar {
         position: absolute;
@@ -441,28 +441,35 @@ header {
 
 /*第四页*/
 .s4.section .internships {
-  width: 50%;
+  width: 550px;
   margin: 0 auto;
-  font-size: 28px;
-  text-align: center; }
-  .s4.section .internships h3 {
-    color: #e5eef6;
-    margin: 10px auto; }
-  .s4.section .internships h4 {
-    font-size: 22px;
-    color: #e5eef6;
-    font-weight: normal;
+  /*每项实习经历*/
+  /*公司名*/
+  /*职位和工作时间*/
+  /*工作内容*/ }
+  .s4.section .internships .internships-list {
+    margin: 20px auto; }
+  .s4.section .internships .company-name {
+    font-size: 24px;
+    color: #ffffff;
     margin: 2px auto; }
-  .s4.section .internships h5 {
-    color: #e5eef6;
-    font-size: 20px;
-    font-weight: normal;
-    padding-bottom: 15px; }
-  .s4.section .internships p {
-    text-align: left;
+  .s4.section .internships .work-pos-time {
+    color: #ffffff;
     font-size: 18px;
-    color: #cde;
-    margin: 5px auto; }
+    font-weight: normal;
+    margin: 10px 0 15px 0; }
+    .s4.section .internships .work-pos-time .work-time {
+      float: right; }
+  .s4.section .internships .work-content {
+    color: #e2f1f6; }
+    .s4.section .internships .work-content dt {
+      font-size: 18px; }
+    .s4.section .internships .work-content dd {
+      font-size: 16px;
+      margin: 3px auto;
+      /*重要内容*/ }
+      .s4.section .internships .work-content dd .important-txt {
+        color: #235c6e; }
 
 @media screen and (max-width: 1255px) {
   /*项目经验*/
@@ -528,15 +535,19 @@ header {
 
   /*实习经历*/
   .s4.section .internships {
-    width: 60%; }
-    .s4.section .internships h3 {
-      font-size: 26px; }
-    .s4.section .internships h4 {
+    width: 70%;
+    /*职位和工作时间*/
+    /*工作内容*/ }
+    .s4.section .internships .company-name {
       font-size: 20px; }
     .s4.section .internships h5 {
-      font-size: 18px; }
-    .s4.section .internships p {
-      font-size: 16px; } }
+      font-size: 16px; }
+    .s4.section .internships .work-pos-time {
+      font-size: 16px; }
+    .s4.section .internships .work-content dt {
+      font-size: 16px; }
+    .s4.section .internships .work-content dd {
+      font-size: 14px; } }
 @media screen and (max-width: 555px) {
   .section.s3 .experience-box {
     width: 80%; }
@@ -626,17 +637,21 @@ header {
     padding-top: 40px; }
     .section.s5 .download-resume a {
       font-size: 20px; } }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 414px) {
   /*实习经历*/
   .s4.section .internships {
-    width: 70%; }
-    .s4.section .internships h3 {
-      font-size: 24px; }
-    .s4.section .internships h4 {
-      font-size: 18px; }
+    width: 80%;
+    /*职位和工作时间*/
+    /*工作内容*/ }
+    .s4.section .internships .company-name {
+      font-size: 20px; }
     .s4.section .internships h5 {
       font-size: 16px; }
-    .s4.section .internships p {
+    .s4.section .internships .work-pos-time {
+      font-size: 16px; }
+    .s4.section .internships .work-content dt {
+      font-size: 16px; }
+    .s4.section .internships .work-content dd {
       font-size: 14px; } }
 @media screen and (max-width: 375px) {
   /*头部*/
@@ -714,7 +729,24 @@ header {
     .section.s3 ul.experience-info li:nth-child(3) {
       clear: both;
       font-size: 12px;
-      padding-left: 5px; } }
+      padding-left: 5px; }
+
+  /*实习经历*/
+  .s4.section .internships {
+    width: 80%;
+    /*职位和工作时间*/
+    /*工作内容*/ }
+    .s4.section .internships .company-name {
+      font-size: 16px; }
+    .s4.section .internships h5 {
+      font-size: 14px; }
+    .s4.section .internships .work-pos-time {
+      font-size: 14px;
+      margin: 8px 0 5px 0; }
+    .s4.section .internships .work-content dt {
+      font-size: 14px; }
+    .s4.section .internships .work-content dd {
+      font-size: 13px; } }
 @media screen and (max-width: 345px) {
   #main .box .tb-cell ul {
     margin: 2px auto; }

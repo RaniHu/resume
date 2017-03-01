@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Microsoft Yahei';
+  font-family: Lato, 'Microsoft Yahei';
 }
 
 li {
@@ -213,11 +213,11 @@ $transition-delay: 0.5s;
     @include transform(translateY(0px))
   }
   100% {
-    @include transform(translateY( 20px))
+    @include transform(translateY(20px))
   }
- /* 100% {
-    @include transform(translateY( 0px))
-  }*/
+  /* 100% {
+     @include transform(translateY( 0px))
+   }*/
 }
 
 @keyframes move {
@@ -231,14 +231,12 @@ $transition-delay: 0.5s;
     @include transform(translateY(0px))
   }
   100% {
-    @include transform(translateY( 20px))
+    @include transform(translateY(20px))
   }
   /*100% {
     @include transform(translateY( 0px))
   }*/
 }
-
-
 
 .s2 {
   ul#skill-tip {
@@ -257,7 +255,7 @@ $transition-delay: 0.5s;
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: #3f3f5f;
+        color: darken(#6c85bb, 30%);
         width: 65px;
         text-align: left;
       }
@@ -267,7 +265,7 @@ $transition-delay: 0.5s;
         width: 85%;
         height: 100%;
         border-radius: 15px;
-        background-color: #53537E;
+        background-color: darken(#6c85bb, 25%);
         margin-left: 30px;
         span.skill-bar {
           position: absolute;
@@ -289,7 +287,6 @@ $transition-delay: 0.5s;
   }
 
 }
-
 
 /*第三页*/
 .s3 {
@@ -385,16 +382,16 @@ $transition-delay: 0.5s;
       width: 300px;
     }
   }
-  .download-resume{
+  .download-resume {
     text-align: center;
     padding-top: 60px;
     @include transform(translateY(1000px)); //文字由右向中间滑动
-    a{
-     color: #00442d;
-     font-size: 26px;
-     font-weight: bold;
-     transition: 1s;
-      &:hover{
+    a {
+      color: #00442d;
+      font-size: 26px;
+      font-weight: bold;
+      transition: 1s;
+      &:hover {
         color: #ffffff;
       }
     }
@@ -413,7 +410,8 @@ $transition-delay: 0.5s;
       }
 
     }
-    .download-resume{
+
+    .download-resume {
       @include transform(translateY(0));
       @include transition(1s);
       transition-delay: $transition-delay*1.5;
@@ -424,32 +422,43 @@ $transition-delay: 0.5s;
 
 /*第四页*/
 .s4.section {
-  .internships{
-    width:50%;
+  .internships {
+    width: 550px;
     margin: 0 auto;
-    font-size: 28px;
-    text-align: center;
-    h3{
-      color: #e5eef6;
-      margin: 10px auto;
+    /*每项实习经历*/
+    .internships-list {
+      margin: 20px auto;
     }
-    h4{
-      font-size: 22px;
-      color: #e5eef6;
-      font-weight: normal;
-      margin:2px auto;
+    /*公司名*/
+    .company-name {
+      font-size: 24px;
+      color: #ffffff;
+      margin: 2px auto;
     }
-    h5{
-      color: #e5eef6;
-      font-size: 20px;
-      font-weight: normal;
-      padding-bottom: 15px;
-    }
-    p{
-      text-align: left;
+    /*职位和工作时间*/
+    .work-pos-time {
+      color: #ffffff;
       font-size: 18px;
-      color: #cde;
-      margin:5px auto;;
+      font-weight: normal;
+      margin: 10px 0 15px 0;
+      .work-time {
+        float: right;
+      }
+    }
+    /*工作内容*/
+    .work-content {
+      color: lighten(#5eb2cc, 34%);
+      dt {
+        font-size: 18px;
+      }
+      dd {
+        font-size: 16px;
+        margin: 3px auto;
+        /*重要内容*/
+        .important-txt {
+          color: darken(#5eb2cc, 30%);
+        }
+      }
     }
   }
 }
@@ -563,28 +572,33 @@ $transition-delay: 0.5s;
 
   /*实习经历*/
   .s4.section {
-    .internships{
-      width:60%;
-      h3{
-        font-size: 26px;
-      }
-      h4{
+    .internships {
+      width: 70%;
+      .company-name {
         font-size: 20px;
       }
-      h5{
-        font-size: 18px;
-      }
-      p{
+      h5 {
         font-size: 16px;
+      }
+      /*职位和工作时间*/
+      .work-pos-time {
+        font-size: 16px;
+      }
+      /*工作内容*/
+      .work-content {
+        dt {
+          font-size: 16px;
+        }
+        dd {
+          font-size: 14px;
+        }
       }
     }
   }
-
 }
 
 @media screen and (max-width: 555px) {
   .section.s3 {
-
     .experience-box {
       width: 80%;
     }
@@ -675,7 +689,7 @@ $transition-delay: 0.5s;
   /*教育背景*/
   #main .section.s5 {
     .box .tb-cell
-    .bg-icon{
+    .bg-icon {
       width: 60px;
       background-size: 25px;
     }
@@ -707,44 +721,53 @@ $transition-delay: 0.5s;
     .education h1 {
       padding-left: 0;
     }
-    .download-resume{
+    .download-resume {
       padding-top: 40px;
-      a{
+      a {
         font-size: 20px;
       }
     }
   }
 }
+
 //iphone6 plus
-@media screen and(max-width: 420px) {
+@media screen and(max-width: 414px) {
 
   /*实习经历*/
   .s4.section {
-    .internships{
-      width:70%;
-      h3{
-        font-size: 24px;
+    .internships {
+      width: 80%;
+      .company-name {
+        font-size: 20px;
       }
-      h4{
-        font-size: 18px;
-      }
-      h5{
+      h5 {
         font-size: 16px;
       }
-      p{
-        font-size: 14px;
+      /*职位和工作时间*/
+      .work-pos-time {
+        font-size: 16px;
+      }
+      /*工作内容*/
+      .work-content {
+        dt {
+          font-size: 16px;
+        }
+        dd {
+          font-size: 14px;
+        }
       }
     }
   }
 
 }
+
 //iphone6
 @media screen and (max-width: 375px) {
 
   /*头部*/
-  header{
-    top:10px;
-    #menu li a{
+  header {
+    top: 10px;
+    #menu li a {
       height: 28px;
       line-height: 28px;
     }
@@ -845,6 +868,32 @@ $transition-delay: 0.5s;
       }
     }
   }
+  /*实习经历*/
+  .s4.section {
+    .internships {
+      width: 80%;
+      .company-name {
+        font-size: 16px;
+      }
+      h5 {
+        font-size: 14px;
+      }
+      /*职位和工作时间*/
+      .work-pos-time {
+        font-size: 14px;
+        margin: 8px 0 5px 0;
+      }
+      /*工作内容*/
+      .work-content {
+        dt {
+          font-size: 14px;
+        }
+        dd {
+          font-size: 13px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 345px) {
@@ -902,27 +951,27 @@ $transition-delay: 0.5s;
 
   /*工作经历*/
   .s4.section {
-    .internships{
-      width:72%;
-      h3{
+    .internships {
+      width: 72%;
+      h3 {
         font-size: 20px;
       }
-      h4{
+      h4 {
         font-size: 15px;
       }
-      h5{
+      h5 {
         font-size: 14px;
       }
-      p{
+      p {
         font-size: 12px;
       }
     }
   }
   /*个人信息*/
-  .section.s5{
-    .download-resume{
+  .section.s5 {
+    .download-resume {
       padding-top: 10px;
-      a{
+      a {
         font-size: 18px;
       }
     }
@@ -1006,25 +1055,26 @@ $transition-delay: 0.5s;
   /*个人信息*/
   #main .section.s5 {
     .box .tb-cell
-    .bg-icon{
+    .bg-icon {
       width: 60px;
       background-size: 20px;
-    }}
-  .section.s5{
-    .download-resume{
+    }
+  }
+  .section.s5 {
+    .download-resume {
       padding-top: 5px;
-      a{
+      a {
         font-size: 16px;
       }
     }
 
   }
-  .s5 .education ul li , .s5 .award ul li{
+  .s5 .education ul li, .s5 .award ul li {
     height: 25px;
     line-height: 25px;
   }
 
-  #main .section.s5 h1{
+  #main .section.s5 h1 {
     font-size: 16px;
   }
 
