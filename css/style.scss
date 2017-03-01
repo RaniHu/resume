@@ -881,7 +881,7 @@ $transition-delay: 0.5s;
       /*职位和工作时间*/
       .work-pos-time {
         font-size: 14px;
-        margin: 8px 0 5px 0;
+        margin: 5px 0 3px 0;
       }
       /*工作内容*/
       .work-content {
@@ -889,7 +889,7 @@ $transition-delay: 0.5s;
           font-size: 14px;
         }
         dd {
-          font-size: 13px;
+          font-size: 12px;
         }
       }
     }
@@ -949,24 +949,6 @@ $transition-delay: 0.5s;
     }
   }
 
-  /*工作经历*/
-  .s4.section {
-    .internships {
-      width: 72%;
-      h3 {
-        font-size: 20px;
-      }
-      h4 {
-        font-size: 15px;
-      }
-      h5 {
-        font-size: 14px;
-      }
-      p {
-        font-size: 12px;
-      }
-    }
-  }
   /*个人信息*/
   .section.s5 {
     .download-resume {

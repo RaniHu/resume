@@ -742,11 +742,11 @@ header {
       font-size: 14px; }
     .s4.section .internships .work-pos-time {
       font-size: 14px;
-      margin: 8px 0 5px 0; }
+      margin: 5px 0 3px 0; }
     .s4.section .internships .work-content dt {
       font-size: 14px; }
     .s4.section .internships .work-content dd {
-      font-size: 13px; } }
+      font-size: 12px; } }
 @media screen and (max-width: 345px) {
   #main .box .tb-cell ul {
     margin: 2px auto; }
@@ -779,18 +779,6 @@ header {
       font-size: 14px; }
     .section.s3 ul.experience-info li:nth-child(3) {
       padding-top: 0; }
-
-  /*工作经历*/
-  .s4.section .internships {
-    width: 72%; }
-    .s4.section .internships h3 {
-      font-size: 20px; }
-    .s4.section .internships h4 {
-      font-size: 15px; }
-    .s4.section .internships h5 {
-      font-size: 14px; }
-    .s4.section .internships p {
-      font-size: 12px; }
 
   /*个人信息*/
   .section.s5 .download-resume {
