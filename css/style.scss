@@ -732,11 +732,15 @@ $transition-delay: 0.5s;
 
 //iphone6 plus
 @media screen and(max-width: 414px) {
+  /*slide左右滑块*/
+  .fp-controlArrow.fp-prev,.fp-controlArrow.fp-next{
+    border-width:10px 10px 10px 0;
 
+  }
   /*实习经历*/
   .s4.section {
     .internships {
-      width: 80%;
+      width: 70%;
       .company-name {
         font-size: 20px;
       }
@@ -746,6 +750,7 @@ $transition-delay: 0.5s;
       /*职位和工作时间*/
       .work-pos-time {
         font-size: 16px;
+        margin: 10px 0 5px 0;
       }
       /*工作内容*/
       .work-content {
@@ -871,9 +876,8 @@ $transition-delay: 0.5s;
   /*实习经历*/
   .s4.section {
     .internships {
-      width: 80%;
       .company-name {
-        font-size: 16px;
+        font-size: 18px;
       }
       h5 {
         font-size: 14px;
@@ -881,7 +885,7 @@ $transition-delay: 0.5s;
       /*职位和工作时间*/
       .work-pos-time {
         font-size: 14px;
-        margin: 5px 0 3px 0;
+        margin: 8px 0 5px 0;
       }
       /*工作内容*/
       .work-content {
@@ -889,7 +893,7 @@ $transition-delay: 0.5s;
           font-size: 14px;
         }
         dd {
-          font-size: 12px;
+          font-size: 13px;
         }
       }
     }

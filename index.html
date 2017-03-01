@@ -104,7 +104,8 @@
         <div class="box experience-box">
             <div class="experience tb-cell">
                 <ul class="experience-info">
-                    <li><a href="https://github.com/RaniHu/shoppingStore"><i class="experience-icon resume-icon"> </i></a>
+                    <li><a href="https://github.com/RaniHu/shoppingStore"><i
+                            class="experience-icon resume-icon"> </i></a>
                     </li>
                     <li class="experience-title"><a href="https://github.com/RaniHu/shoppingStore">商城后台管理系统</a></li>
                     <li>
@@ -134,34 +135,44 @@
     <!-- 实习经历-->
     <section class="section s4">
         <div class="internships">
-            <div class="internships-list">
-                <h4 class="company-name">珠海新华通软件股份有限公司</h4>
-                <div class="work-pos-time">
-                    <span>前端开发实习生</span>
-                    <span class="work-time">2016.09-2016.12</span>
+            <div class="slide">
+                <div class="internships-list">
+                    <h4 class="company-name">珠海新华通软件股份有限公司</h4>
+
+                    <div class="work-pos-time">
+                        <span>前端开发实习生</span>
+                        <span class="work-time">2016.09-2016.12</span>
+                    </div>
+                    <dl class="work-content">
+                        <dt>工作内容：</dt>
+                        <dd>1. 与设计师一起讨论<span class="important-txt">党建系统</span>手机端界面风格,以提升视觉效果和用户体验。</dd>
+                        <dd>2. 配合后台工程师一起研讨技术实现方案。运用html,css,sass,js,jquery等技术重构党建系统<span
+                                class="important-txt">手机端</span>样式。
+                        </dd>
+                        <dd>3. 编写可复用的用户界面组件，如表单、弹出框、下拉框、面板、二级菜单等。</dd>
+                    </dl>
                 </div>
-                <dl class="work-content">
-                    <dt>工作内容：</dt>
-                    <dd>1. 与设计师一起讨论<span class="important-txt">党建系统</span>手机端界面风格,以提升视觉效果和用户体验。</dd>
-                    <dd>2. 配合后台工程师一起研讨技术实现方案。运用html,css,sass,js,jquery等技术重构党建系统<span class="important-txt">手机端</span>样式。</dd>
-                    <dd>3. 编写可复用的用户界面组件，如表单、弹出框、下拉框、面板、二级菜单等。</dd>
-                </dl>
-            </div>
-            <div class="internships-list">
-                <h4 class="company-name">武汉朗风数据科技有限公司</h4>
-                <div class="work-pos-time">
-                    <span>前端开发实习生</span>
-                    <span class="work-time">2016.03-2016.6</span>
-                </div>
-                <dl class="work-content">
-                    <dt>工作内容：</dt>
-                    <dd>1. 与组员讨论设计并利用axure画出<span class="important-txt">产品原型图</span>。</dd>
-                    <dd>2. 设计和开发<span class="important-txt">分级诊疗系统医生端</span>模块,此系统主要针对武汉的社区服务站。</dd>
-                    <dd>3. 项目中主要负责用html，css，js,jquery实现前端页面，利用<span class="important-txt">django</span>框架和MySql数据库完成与前台的页面交互和数据逻辑展示。</dd>
-                </dl>
             </div>
 
+            <div class="slide">
+                <div class="internships-list">
+                    <h4 class="company-name">武汉朗风数据科技有限公司</h4>
+
+                    <div class="work-pos-time">
+                        <span>前端开发实习生</span>
+                        <span class="work-time">2016.03-2016.6</span>
+                    </div>
+                    <dl class="work-content">
+                        <dt>工作内容：</dt>
+                        <dd>1. 与组员讨论设计并利用axure画出<span class="important-txt">产品原型图</span>。</dd>
+                        <dd>2. 设计和开发<span class="important-txt">分级诊疗系统医生端</span>模块,此系统主要针对武汉的社区服务站。</dd>
+                        <dd>3. 项目中主要负责用html，css，js,jquery实现前端页面，利用<span class="important-txt">django</span>框架和MySql数据库完成与前台的页面交互和数据逻辑展示。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
         </div>
+
     </section>
     <!--个人信息-->
     <section class="section s5">
@@ -198,7 +209,7 @@
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],                   //定义锚链接
             scrollingSpeed: 500,                                              //滚动速度
             menu: "#menu",
-            navigation: true,                                              //显示项目导航
+            navigation: false,                                              //显示项目导航
             navigationPosition: 'right',                                   //导航位置
             navigationTooltips: ['首页', '专业技能', '项目经验', '实习经历', '个人信息'],     //导航圈的文字
             navigationColor: '',                                      //导航颜色

@@ -638,9 +638,13 @@ header {
     .section.s5 .download-resume a {
       font-size: 20px; } }
 @media screen and (max-width: 414px) {
+  /*slide左右滑块*/
+  .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+    border-width: 10px 10px 10px 0; }
+
   /*实习经历*/
   .s4.section .internships {
-    width: 80%;
+    width: 70%;
     /*职位和工作时间*/
     /*工作内容*/ }
     .s4.section .internships .company-name {
@@ -648,7 +652,8 @@ header {
     .s4.section .internships h5 {
       font-size: 16px; }
     .s4.section .internships .work-pos-time {
-      font-size: 16px; }
+      font-size: 16px;
+      margin: 10px 0 5px 0; }
     .s4.section .internships .work-content dt {
       font-size: 16px; }
     .s4.section .internships .work-content dd {
@@ -733,20 +738,19 @@ header {
 
   /*实习经历*/
   .s4.section .internships {
-    width: 80%;
     /*职位和工作时间*/
     /*工作内容*/ }
     .s4.section .internships .company-name {
-      font-size: 16px; }
+      font-size: 18px; }
     .s4.section .internships h5 {
       font-size: 14px; }
     .s4.section .internships .work-pos-time {
       font-size: 14px;
-      margin: 5px 0 3px 0; }
+      margin: 8px 0 5px 0; }
     .s4.section .internships .work-content dt {
       font-size: 14px; }
     .s4.section .internships .work-content dd {
-      font-size: 12px; } }
+      font-size: 13px; } }
 @media screen and (max-width: 345px) {
   #main .box .tb-cell ul {
     margin: 2px auto; }
