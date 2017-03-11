@@ -4,7 +4,6 @@
     <list default="true" id="530769bc-edb2-4ff7-ac14-9ce6d8c608bb" name="默认的" comment="个人简历">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/sprite.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/common_mixin.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/reset.css" />
       <change type="DELETED" beforePath="E:\github\resume\css\common_mixin.css" afterPath="" />
       <change type="DELETED" beforePath="E:\github\resume\css\common_mixin.css.map" afterPath="" />
@@ -18,6 +17,7 @@
       <change type="DELETED" beforePath="E:\github\resume\img\s3\food2.jpg" afterPath="" />
       <change type="DELETED" beforePath="E:\github\resume\img\s3\food3.jpg" afterPath="" />
       <change type="DELETED" beforePath="E:\github\resume\index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="E:\github\resume\css\jquery.fullPage.css" afterPath="$PROJECT_DIR$/src/css/jquery.fullPage.css" />
       <change type="MOVED" beforePath="E:\github\resume\css\style.scss" afterPath="$PROJECT_DIR$/src/css/style.scss" />
       <change type="MOVED" beforePath="E:\github\resume\img\award-list.png" afterPath="$PROJECT_DIR$/src/img/icon/award-list.png" />
@@ -37,14 +37,6 @@
       <change type="MOVED" beforePath="E:\github\resume\img\weixin.png" afterPath="$PROJECT_DIR$/src/img/icon/weixin.png" />
       <change type="MOVED" beforePath="E:\github\resume\js\jquery-1.9.1-min.js" afterPath="$PROJECT_DIR$/src/js/jquery-1.9.1-min.js" />
       <change type="MOVED" beforePath="E:\github\resume\js\jquery.fullPage.js" afterPath="$PROJECT_DIR$/src/js/jquery.fullPage.js" />
-    </list>
-    <list id="8e20f60d-ced3-41aa-8396-08dba2355d6e" name="拒绝提交:默认的" comment="个人简历">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/resume_node_modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/resume.iml" afterPath="$PROJECT_DIR$/.idea/resume.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="resume.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,8 +104,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://E:/web exercise/webstorm/gulp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.5369318">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -292,7 +284,25 @@
       <option name="project" value="LOCAL" />
       <updated>1472870134719</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="个人简历">
+      <created>1489240932173</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1489240932173</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gulp配置文件">
+      <created>1489241106481</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1489241106481</updated>
+    </task>
+    <task id="LOCAL-00004" summary="package文件">
+      <created>1489241178125</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1489241178125</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -305,7 +315,7 @@
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5602606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -338,7 +348,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="适配iPhone6以下" />
     <MESSAGE value="个人简历" />
-    <option name="LAST_COMMIT_MESSAGE" value="个人简历" />
+    <MESSAGE value="gulp配置文件" />
+    <MESSAGE value="package文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="package文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -527,8 +539,8 @@
     </entry>
     <entry file="file://E:/web exercise/webstorm/gulp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5369318">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
