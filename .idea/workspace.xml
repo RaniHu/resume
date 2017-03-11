@@ -5,18 +5,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/sprite.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/common_mixin.scss" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/reset.css" />
-      <change type="DELETED" beforePath="E:\github\resume\css\common_mixin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\css\common_mixin.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\css\common_mixin.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\css\style.css.map" afterPath="" />
       <change type="DELETED" beforePath="E:\github\resume\download\resume.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\img\hospital.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\img\my-photo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\img\s3\food1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\img\s3\food2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\img\s3\food3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\resume\index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="E:\github\resume\css\jquery.fullPage.css" afterPath="$PROJECT_DIR$/src/css/jquery.fullPage.css" />
       <change type="MOVED" beforePath="E:\github\resume\css\style.scss" afterPath="$PROJECT_DIR$/src/css/style.scss" />
@@ -302,7 +291,13 @@
       <option name="project" value="LOCAL" />
       <updated>1489241178125</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="删除gulp之前版本">
+      <created>1489241629510</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489241629510</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -350,7 +345,8 @@
     <MESSAGE value="个人简历" />
     <MESSAGE value="gulp配置文件" />
     <MESSAGE value="package文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="package文件" />
+    <MESSAGE value="删除gulp之前版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除gulp之前版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
