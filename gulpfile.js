@@ -58,28 +58,29 @@ gulp.task('htmlmin', function () {
     };
     gulp.src('./src/*.html')
         .pipe(htmlmin(options))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./'));
 });
+
 //压缩css
 gulp.task('minifycss', function () {
     return gulp.src('./src/css/*.css')
         .pipe(concat('main.css'))    		//合并所有css到main.css
-        .pipe(gulp.dest('css'))   			//输出文件夹
+        .pipe(gulp.dest('./src/css'))   	//输出文件夹
         .pipe(rename({suffix: '.min'}))   	//rename压缩后的文件名
         .pipe(minifycss())   				//执行压缩
-        .pipe(gulp.dest('./dist/css')) 	//输出文件夹
-        .pipe(gulp.dest('./src/css')); 	//输出文件夹
+        .pipe(gulp.dest('./css')) 	        //输出文件夹
+        .pipe(gulp.dest('./src/css')); 	    //输出文件夹
 });
 
 //压缩，合并 js
 gulp.task('minifyjs', function () {
     return gulp.src('./src/js/*.js')
         .pipe(concat('main.js'))    		//合并所有js到main.js
-        .pipe(gulp.dest('js'))      	    //输出到文件夹
+        .pipe(gulp.dest('./src/js'))      	//输出到文件夹
         .pipe(rename({suffix: '.min'}))     //rename压缩后的文件名
         .pipe(uglify())    					//压缩
-        .pipe(gulp.dest('./dist/js'))  			//输出
-        .pipe(gulp.dest('./src/js'));  			//输出
+        .pipe(gulp.dest('./js'))  		    //输出
+        .pipe(gulp.dest('./src/js'));  		//输出
 });
 
 
@@ -89,14 +90,14 @@ gulp.task('minifyimg', function () {
         .pipe(smushit({
             verbose: true
         }))
-        .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./img'));
 });
 
 
 //文件清理
 //执行压缩前，先删除以前压缩的文件
 gulp.task('clean', function () {
-    return del(['./src/css/*.min.css', './dist/css/*.min.css', './css/*.css','./src/js/*.min.js', './dist/js/*.min.js','./js/*.js'])
+    return del(['./src/css/*.min.css', './css/*.min.css', './js/*.js','./src/js/*.min.js', './dist/js/*.min.js','./js/*.js'])
 });
 
 /*gulp.task('rev',['revCss'],function() {
